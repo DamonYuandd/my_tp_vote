@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>友情连接编辑</title>
+
+<layout name="Inc:edit_page" cache="0" />
+
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])} > 编辑内容</div>
+<form action="__APP__/Admin/Link/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+<input type="hidden" name="id" value="{$obj.id}">
+<input type="hidden" name="cid" value="{$_GET['id']}">
+<input type="hidden" name="my_id" value="{$obj.my_id}">
+<?php if( !isMultilingual($custom) ) { ?>
+<input type="hidden" name="lang" value="{$obj.lang}">
+<?php } ?>
+<?php if( $_GET['lang']=='mobile' ) { ?>
+<input type="hidden" name="lang" value="{.lang}">
+<?php } ?>
+   <fieldset>
+       <ul class="align-list">
+       		<?php if( isShowMobile($custom) ) { ?>
+            <li>
+                <label>
+                    选择设备
+                </label><input type="radio" value="<?php echo $lang; ?>" name="mode" checked="checked">&nbsp;电脑版&nbsp;&nbsp;&nbsp; <input type="radio" value="mobile" name="mode">&nbsp;移动版
+            </li>
+            <?php } ?>
+			<?php if( $_GET['lang']!='mobile' ) { ?>
+			<li id="li_lang">
+            {~isLang()}
+			</li>
+			<?php } ?>
+			
+			<li>
+               <label>当前分类</label>
+               {~getCurCategoryNav($_GET['cid'])}
+           </li>
+			
+           <li>
+               <label>QQ名称</label>
+               <input type="text" id="title" name="title" value="{$obj.title}" class="type-text">
+           </li>
+            <li>
+               <label>QQ号码</label>
+               <input type="text" id="url" name="url" value="{$obj.url}" class="type-text">
+           </li>
+		  
+		   <?php if( $_GET['lang']!='mobile' ) { ?>
+			<?php if( isShowMobile($custom) ) { ?>
+            <li id="li_synch_mobile">
+                <label>
+                    手机同步
+                </label>
+                <input type="checkbox" name="synch_mobile" id="synch_mobile" value="1">
+            </li>
+			{~isCategory($mobileOneCategoryList,$mobileTwoCategoryList,$mobileThreeCategoryList,'手机分类','mobile')}
+			<script>$('#li_mobile_category').hide();</script>
+            <?php } ?>
+			<?php } ?>
+           <li>
+               <label>现在发布<a href="#" class="issue" title="在网站前台显示">?</a></label>
+               <input type="checkbox" id="is_publish" name="is_publish" value="1">
+           </li>
+           <li>
+               <label></label>
+               <input type="submit" value="确定并保存" name="save" class="button button-green" />
+               <input type="reset" value="重置" class="button button-red" />
+               <input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+</body>
+</html>

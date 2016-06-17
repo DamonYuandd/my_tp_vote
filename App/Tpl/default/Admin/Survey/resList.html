@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>在线调查编辑</title>
+
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+<script src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+<script src="__ADMIN__/Public/js/97Date/WdatePicker.js"></script>
+<script src="__ADMIN__/Public/js/base.js"></script>
+<script>
+function Data(){
+	this._APP_ = "__APP__";
+	this.levels = "<?php echo $levels;?>";
+	this.category_id = "<?php echo $obj['category_id'];?>";
+	this.get_cid = "<?php echo $_GET['cid'];?>";
+	this.get_id = "<?php echo $_GET['id'];?>";
+	this.lang = "<?php echo $obj['lang'];?>";
+	this.get_lang = "<?php echo $_GET['lang'];?>";
+	this.is_comment = "<?php echo $obj['is_comment'];?>";
+	this.is_publish = "<?php echo $obj['is_publish'];?>";
+	this.actionName = "<?php echo $actionName;?>";
+}
+
+
+</script>
+<script src="__ADMIN__/Public/js/edit.js"></script>
+
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])}</div>
+<form action="__APP__/Admin/Survey/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+<input type="hidden" name="id" value="{$obj.id}">
+<input type="hidden" name="my_id" value="{$obj.my_id}">
+<input type="hidden" name="one_category_id" value="{.cid}">  
+   <fieldset>
+       <ul class="align-list">
+           <li>
+               <label>主题</label>
+               <input type="text" id="title" name="title" value="{$obj.title}" class="type-text">
+           </li>
+            <li>
+               <label>描述</label>
+               <textarea rows='3' cols="20">{$obj.description}</textarea>
+           </li>
+           <li>
+               <label>有效期</label>
+               <input type="text" id="validity_time" name="validity_time" value="<?php if($obj['validity_time']!=''){ echo date('Y-m-d',$obj['validity_time']);}else{echo date('Y-m-d');} ?>" onClick="WdatePicker()">
+           </li>
+         
+           <div id="more_options_box" class="more-box">
+
+           </div>
+           <li>
+           <div class="more-title"><strong style="font-size:18px;">问题列表</strong></div>
+           <div id="ques_list">
+           <?php echo get_QuesResultList($obj['id']); ?>
+           
+           </div>         
+           </li>          
+             <li>
+               <label></label>
+               <input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button" />
+            </li>
+
+        </ul>
+    </fieldset>
+</form>
+
+</body>
+</html>

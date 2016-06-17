@@ -1,0 +1,158 @@
+<?php
+session_start();
+$_SESSION["file_info"] = array();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>文件批量上传</title>
+       
+        <link href="__ADMIN__/Public/css/swfupload.css" rel="stylesheet" type="text/css" />
+        <link href="__ADMIN__/Public/css/idtabs.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="__ADMIN__/Public/js/swfupload/swfupload.js"></script>
+        <script type="text/javascript" src="__ADMIN__/Public/js/swfupload/handlers.js"></script>
+        <script type="text/javascript" src="__ADMIN__/Public/js/swfupload/fileprogress.js"></script>
+        <script type="text/javascript" src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+      	
+        <script type="text/javascript">
+            var swfu;
+            window.onload = function () {
+                swfu = new SWFUpload({
+                    // Backend Settings
+                    upload_url: "__APP__/Admin/Goods/upfile/",
+                    post_params: {"PHPSESSID": "<?php echo session_id(); ?>"},
+
+                    // File Upload Settings
+                    file_size_limit : "2 MB",	// 2MB
+                    file_types : "*.jpg",
+                    file_types_description : "JPG Images",
+                    file_upload_limit : "0",
+
+                    // Event Handler Settings - these functions as defined in Handlers.js
+                    //  The handlers are not part of SWFUpload but are part of my website and control how
+                    //  my website reacts to the SWFUpload events.
+                    file_queued_handler : fileQueued,
+                    file_queue_error_handler : fileQueueError,
+                    file_dialog_complete_handler : fileDialogComplete,
+                    upload_progress_handler : uploadProgress,
+                    upload_error_handler : uploadError,
+                    upload_success_handler : uploadSuccess,
+                    upload_complete_handler : uploadComplete,
+
+                    // Button Settings
+                    button_image_url : "",
+                    button_placeholder_id : "spanButtonPlaceholder",
+                    button_width: 180,
+                    button_height: 18,
+                    button_text : '<span class="button">选择图片<span class="btn_startupload">(最大 2 MB)</span></span>',
+                    button_text_style : '.button { font-family: Helvetica, Arial, sans-serif; font-size: 12px; }',
+                    button_text_top_padding: 0,
+                    button_text_left_padding: 18,
+                    button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+                    button_cursor: SWFUpload.CURSOR.HAND,
+
+                    // Flash Settings
+                    flash_url : "__ADMIN__/Public/js/swfupload/swfupload.swf",
+
+                    custom_settings : {
+                        progressTarget : "fsUploadProgress",
+                        cancelButtonId : "btnCancel"
+                    },
+
+                    // Debug Settings
+                    debug: false
+                });
+            };
+            var picstr = '';
+			function uploadSuccess(file,serverData){
+				try {
+
+					var arry = new Array();
+					arry = serverData.split(":");
+					if(arry[1]=='error'){
+						alert(arry[2]);
+					}else{		
+				   		
+				   		picstr += arry[2]+',';
+						$('#photos').val(picstr);
+					}
+					
+				} catch (ex) {
+			        this.debug(ex);
+			    }
+			 }			 		 
+
+		function retrunValue()  
+		{  
+			var s = document.getElementById("photos").value; 
+			if(s!=''){ 
+				window.returnValue=s;  
+				window.close(); 
+			}else{
+				alert('请上传文件');
+				return false;
+			}
+				
+		} 
+        </script>
+    </head>
+    <body>
+    <div class="nav-site">文件批量上传</div>
+        
+    
+    <div id="uploadpanel" class="usual">
+   <table cellspacing="0" cellpadding="0" border="1" class="grid-table"> 
+	<thead> 
+		<tr>
+			<th ><span class="legend">上传队列</span></th>
+	    </tr> 
+	</thead> 
+	<tbody>
+		<tr> 
+			<td><div id="tab1" class="div">
+                <div id="content">
+					
+                    <?php
+                    if( !function_exists("imagecopyresampled") ) {
+                        ?>
+                    <div class="message">
+                        <h4><strong>错误:</strong> </h4>
+                        <p>服务器端并没有安装GD库</p>
+                        <p>请在php.ini中把<code>;extension=php_gd2.dll</code>修改为<code>extension=php_gd2.dll</code> and making sure your extension_dir is pointing in the right place. <code>extension_dir = "c:\php\extensions"</code></p>
+                    </div>
+                        <?php
+                    } else {
+                        ?>
+                    <form>
+                        <div class="fieldset flash" id="fsUploadProgress">
+                            
+                        </div>
+                        <div style="display: inline; border: solid 1px #7FAAFF; background-color: #C5D9FF;height:19px;margin:0px 3px 0px 0px;float:left;">
+                            <span id="spanButtonPlaceholder"></span>&nbsp;
+                            
+                        </div>
+                        <input type="button" value="开始上传" class="btn_startupload" onclick="swfu.startUpload();"/>
+                        
+                        <input name="subpic" id="subpic" type="button"  class="btn_startupload" value="提 交" onclick="return retrunValue()"/>
+                         
+                            <input name="photos" id="photos" type="hidden" value=""/>
+                    </form>
+                        <?php
+                    }
+                    ?>
+                    <div id="thumbnails"></div>
+                </div>
+            </div></td>
+	    </tr>	</tbody>
+	<tfoot>
+	</tfoot>
+</table>
+   
+         
+            
+            
+        </div>
+    </body>
+</html>

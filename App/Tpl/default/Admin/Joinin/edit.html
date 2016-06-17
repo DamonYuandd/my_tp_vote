@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>详细内容</title>
+
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+<script src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+<script src="__ADMIN__/Public/js/97Date/WdatePicker.js"></script>
+<script>UEDITOR_HOME_URL='__PUBLIC__/ueditor/';</script>
+<script type="text/javascript" src="__PUBLIC__/ueditor/editor_config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ueditor/editor_all_min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/ueditor/themes/default/ueditor.css"/>
+
+<script type="text/javascript">
+function Data(){
+	this._APP_ = "__APP__";
+	this.levels = "<?php echo $levels;?>";
+	this.category_id = "<?php echo $obj['category_id'];?>";
+	this.get_cid = "<?php echo $_GET['cid'];?>";
+	this.rowpage = "<?php echo $rowpage; ?>";
+	this.get_id = "<?php echo $_GET['id'];?>";
+	this.lang = "<?php echo $obj['lang'];?>";
+	this.get_lang = "<?php echo $_GET['lang'];?>";
+	this.is_comment = "<?php echo $obj['is_comment'];?>";
+	this.is_publish = "<?php echo $obj['is_publish'];?>";
+	this.actionName = "<?php echo $actionName;?>";
+
+}
+</script>
+<script src="__ADMIN__/Public/js/edit.js"></script>
+<style type="text/css">
+	
+	#joinin-table{
+		width:960px;
+		margin:50px auto 0;	
+		border-collapse:collapse;
+	}
+
+	#joinin-table td{
+		padding:5px 5px;
+		border: solid 1px #808080;
+	}
+	
+	.joinin-item{		
+		font-weight:bold;
+		width:80px;
+	}
+
+	.joinin-plan{
+		vertical-align:top;
+	}
+</style>
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])}</div>
+<table id="joinin-table" cellpadding="0" cellspacing="0"  >
+	<tr>
+		<td class="joinin-item">公司名称：</td>
+		<td>{$obj.company_name}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">联系人：</td>
+		<td>{$obj.linkman}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">联系地址：</td>
+		<td>{$obj.address}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">联系电话：</td>
+		<td>{$obj.tel}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">传真：</td>
+		<td>{$obj.fax}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">手机：</td>
+		<td>{$obj.mobile}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">电子邮箱：</td>
+		<td>{$obj.email}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">网址：</td>
+		<td>{$obj.website}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">咨询内容：</td>
+		<td>{$obj.content}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">注册资金：</td>
+		<td>{$obj.registered_capital}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">员工人数：</td>
+		<td>{$obj.employee_number}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item">提交时间：</td>
+		<td>{$obj.create_time|date="Y-m-d",###}</td>
+	</tr>
+	<tr>
+		<td class="joinin-item joinin-plan">详细计划：</td>
+		<td>{$obj.content}</td>
+	</tr>
+</table>
+
+<div style="text-align:center;margin-top:10px">
+	<input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button" style="margin:0 auto" />
+</div>
+<div style="height:40px"></div>
+</body>
+</html>

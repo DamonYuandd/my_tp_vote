@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>在线加盟管理</title>
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+<script src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+<script>
+function Data(){
+	this._APP_ = "__APP__";
+	this.actionName = "<?php echo $actionName;?>";
+	this.category_id = "<?php echo $obj['category_id'];?>";
+	this.rowpage = "<?php echo $rowpage; ?>";
+	this.get_cid = "<?php echo $_GET['cid'];?>";
+	this.get_id = "<?php echo $_GET['id'];?>";
+}
+</script>
+<script src="__ADMIN__/Public/js/index.js"></script>
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])}</div>
+<form action="__APP__/Admin/Joinin" method="post" id="form_list">
+<input type="hidden" name="cid" value="{.cid}" />
+<table class="grid-function" border="0" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th width="600">
+				<div class="qw-fl grid-add-data">
+				</div>
+				<div class="qw-fl grid-batch-operate">
+					<a href="#" id="on_delete" title="彻底删除"><img src="__ADMIN__/Public/imgs/delete.png" align="top" /> </a>&nbsp;&nbsp;
+				</div>
+				<div class="qw-fr">
+					<input name="searchKey" id="searchKey" value="{$searchKey}" onclick="inputText(this,'请输入关键字');" onblur="inputText(this,'请输入关键字');" class="grid-search-input" /> <input type="button" value="搜索" class="button" id="search_button" />
+				</div>
+			</th>
+		</tr>
+	</thead>
+</table>
+<table class="grid-table" border="1" cellpadding="0" cellspacing="0"> 
+	<thead> 
+		<tr>
+			<th width="15"><input type="checkbox" id="chk_all"></th>
+		    <th>公司名称</th>
+			<th width="45">联系人</th>
+		    <th width="75">提交时间</th>
+		    <th width="75">已读</th>
+		    <th width="75">操作</th>
+		</tr> 
+	</thead> 
+	<tbody>
+		<volist name="dataList" id="vo">
+		<tr> 
+			<td><input type="checkbox" name="ids[]" id="ids{$vo.id}" value="{$i},{$vo.id}"></td>
+		    <td>
+				{$vo.company_name}
+		    </td>
+		    <td>{$vo.linkman}</td>
+		    <td>{$vo.create_time|date='Y-m-d',###}</td>
+   			<td>
+   				<if condition="$vo.read eq 1">是
+   				<else />
+   				否
+   				</if>
+		    </td>
+		    <td>
+		    	<a href="__APP__/Admin/Joinin/edit/id/{$vo.id}">详情</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="javascript:deleteData('__APP__/Admin/Joinin/deleteById/id/{$vo.id}');"><img src="__ADMIN__/Public/imgs/cross.png" /></a>
+		    </td>
+		</tr>
+		</volist>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="10">
+				<div class="qw-fl">
+					<select name="rowpage" id="rowpage">
+						<option value="10">显示10条</option>
+						<option value="25">显示25条</option>
+						<option value="50">显示50条</option>
+						<option value="99999">显示所有</option>
+					</select>
+				</div>
+				<div class="qw-fr">
+					<div class="grid-pagination">
+					{$pageBar}
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+</form>
+</body>
+</html>

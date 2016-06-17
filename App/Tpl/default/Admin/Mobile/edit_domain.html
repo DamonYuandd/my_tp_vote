@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>手机基本设置</title>
+
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+<script src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+<script src="__ADMIN__/Public/js/base.js"></script>
+<script src="__ADMIN__/Public/js/index.js"></script>
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])}</div>
+<form action="__APP__/Admin/Mobile/saveDomain" method="post" enctype="multipart/form-data" class="form">
+<input type="hidden" name="lang" value="mobile">
+<input type="hidden" name="id"  value="{$info.id}"/>
+   <fieldset>
+       <ul class="align-list">
+             <li>
+             <label>选择类型(Select)</label><select name="target">
+             		<option value="{$info.target}"><empty name="info.target">请选择类型<else />{$info.target}</empty></option>
+             		<option value="手机">手机</option>
+             		<option value="PC">PC</option>
+             		<option value="Ipad">Ipad</option>
+             	</select>
+               <label class="tips" id="target"></label>
+             </li>
+            
+             <li>
+             	<label>域名(Domain)</label><input name="domain_name" maxlength="255" class="type-text" value="{$info.domain_name}" /><label class="tips" id="domain"></label>
+             </li>
+             <li>
+            	 <label>备注(Remark)</label><input name="remark" maxlength="255" class="type-text" value="{$info.remark}" /><label class="tips" id="remark"></label>
+             </li>
+               <li>
+               <label></label>
+               <input type="submit" value="确定并保存" class="button button-green" />
+               <input type="reset" value="重置" class="button button-red" />
+               <input class="button" type="button" onclick="javascript:history.go(-1);" value="返回列表">
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("input[name=domain_name],input[name=remark]").focus(function(){
+			$(this).next(".tips").html('');
+		});
+		$("select[name=target]").change(function(){
+			$(this).next(".tips").html('');
+		})
+		$("input:submit").click(function(){
+			if(!$("select[name=target]").val())
+			{
+				$("select[name=target]").next(".tips").html('必须选择分类');
+				return false;
+			}
+			if(!$("input[name=domain_name]").val())
+			{
+				$("input[name=domain_name]").next(".tips").html('必须填写域名');
+				return false;
+			}
+			if(!$("input[name=remark]").val())
+			{
+				$("input[name=remark]").next(".tips").html('必须填写备注');
+				return false;
+			}
+		})
+	})
+</script>
+<style>
+.grid-table tbody tr td a
+{
+	text-decoration:none;
+}
+</style>
+</body>
+</html>

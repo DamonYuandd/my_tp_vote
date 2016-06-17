@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>网络营销编辑</title>
+
+<layout name="Inc:edit_page" cache="0" />
+
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])} > 编辑内容</div>
+<form action="__APP__/Admin/Market/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+	<input type="hidden" id="id" name="id" value="{$obj.id}">
+	<input type="hidden" name="category_id" value="{.cid}">
+	<input type="hidden" name="is_publish" value="1">
+	<input type="hidden" name="hardware" value="{$Think.session.hardware}">
+	<input type="hidden" name="lang" value="{.lang}">
+   <fieldset>
+       <ul class="align-list">
+       	<li>
+               <label>当前分类</label>
+               {~getCurCategoryNav($_GET['cid'])}
+           </li>
+           <li>
+               <label>标题</label>
+               <input type="text" id="title" name="title" value="{$obj.title}" class="type-text">
+           </li>
+            <li>
+               <label>联系人</label>
+               <input type="text" id="linkman" name="linkman" value="{$obj.linkman}" class="type-text">
+           </li>
+           <li>
+               <label>电子邮件</label>
+               <input type="text" id="email" name="email" value="{$obj.email}" class="type-text">
+           </li>
+           <li>
+               <label>联系电话</label>
+               <input type="text" id="tel" name="tel" value="{$obj.tel}" class="type-text">
+           </li>
+           <li>
+               <label>传真</label>
+               <input type="text" id="fax" name="fax" value="{$obj.fax}" class="type-text">
+           </li>
+		   <li>
+               <label>邮编</label>
+               <input type="text" id="postcode" name="postcode" value="{$obj.postcode}" class="type-text">
+           </li>
+           <li>
+               <label>地址</label>
+               <input type="text" id="address" name="address" value="{$obj.address}" class="type-text">
+           </li>
+           <li>
+               <label>地图代码</label>
+                
+               <textarea name="mapcode" id="mapcode" rows="3" cols="60" class="type-text">{$obj.mapcode}</textarea>
+           </li>
+		   <li>
+               <label>乘公交车</label>
+               <textarea name="traffic1" id="traffic1" rows="3" cols="60" class="type-text">{$obj.traffic1}</textarea>
+           </li>
+		   <li>
+               <label>乘出租车</label>
+               <textarea name="traffic2" id="traffic2" rows="3" cols="60" class="type-text">{$obj.traffic2}</textarea>
+           </li>
+           <li>
+               <label>描述</label>
+               <textarea name="content" id="content" rows="3" cols="60" class="type-text">{$obj.content}</textarea>
+           </li>
+		   <li>
+               <label>封面图片</label>
+               <?php if( !empty($obj['image']) ) { ?>
+               <span id="span_image">
+               	<input type="hidden" name="image" value="{$obj.image}">
+			   <img alt="" align="middle" height="80" vspace="5" src="<?php echo __ROOT__.'/Public/images/market/s_'.$obj['image']; ?>">
+           	   <a href="javascript:void(0)" id="delete_image">删除封面</a>&nbsp;&nbsp;&nbsp;&nbsp;
+           	   </span>
+           	   <?php } ?>
+			    <input type="file" name="image">
+           </li>
+		   <li>
+               <label></label>
+            </li>
+           <li>
+               <label></label>
+               <input type="submit" value="确定并保存" name="save" class="button button-green button-big" onclick="return check()"/>
+           	 	<input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button button-big" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+</body>
+</html>

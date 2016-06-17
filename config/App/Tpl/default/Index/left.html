@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>left</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/accordian/style.css" />
+<script src="__PUBLIC__/js/jquery-1.7.1.min.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<script src="__PUBLIC__/js/accordian/accordian-src.js"></script>
+<script src="__PUBLIC__/js/97Date/WdatePicker.js"></script>
+</head>
+<body>
+
+<body>
+<input type="hidden" name="account_id" value="<?php echo $_SESSION['account_id']; ?>">
+<div id="basic-accordian" >
+  <div id="test-header" class="accordion_headings" >Step1 创建网站后台帐号</div>
+  <div id="test-content">
+    <div class="accordion_child">
+    	<form id="website_form" action="__APP__/Account/saveWebsite" method="post" class="form">
+    	<table class="" cellspacing="5">
+    		<tr>
+    			<td align="right">网站名称:</td>
+				<td><input name="website_name" id="website_name" value="{$account.website_name}"></td>
+    		</tr>
+			<tr>
+    			<td align="right" valign="top">网站域名:</td>
+				<td>
+					<?php
+						$urls = explode(',',$account['url']);
+						$count_url = count($urls);
+						$url_str = '';
+						for($i=0;$i<$count_url;$i++) {
+							if(empty($urls[$i])){continue;}
+							$url_str .= $urls[$i];
+							if( ($count_url-2)>$i ) {
+								$url_str .= ',';
+							}
+						}
+					?>
+					<textarea name="url" id="url" rows="3" style="width:251px">{$url_str}</textarea> 
+				<div style="color:#999">不带http://www. ,首个域名必需赠送的三级域名，每个域名结尾要有逗号","。</div><br></td>
+    		</tr>
+			<tr>
+    			<td align="right"></td>
+				<td><input name="yy_price" id="yy_price" value="{$account.yy_price}"></td>
+    		</tr>
+			<tr>
+    			<td align="right">服务包:</td>
+				<td><input name="service_price" id="service_price" value="{$account.service_price}"></td>
+    		</tr>
+			<tr>
+    			<td align="right">合同号:</td>
+				<td><input name="contract_number" id="contract_number" value="{$account.contract_number}"></td>
+    		</tr>
+    		<tr>
+    			<td align="right">网站管理账号:</td>
+				<td><input name="username" id="username" value="admin" disabled="false"></td>
+    		</tr>
+			<tr>
+    			<td align="right">管理密码:</td>
+				<td><input type="text" name="password" id="password" value=""></td>
+    		</tr>
+			<tr>
+    			<td></td>
+				<td><input type="submit" value="保存并下一步" style="height:30px;"></td>
+    		</tr>
+    	</table>
+		</form>
+    </div>
+  </div>
+  <div id="test1-header" class="accordion_headings" <?php if(!$isConnect){echo 'style="background-color:red"';} ?>>Step2 配置数据库连接</div>
+  <div id="test1-content">
+    <div class="accordion_child">
+    	<form id="database_form" action="__APP__/Account/saveDatabase" method="post" class="form">
+		<table class="database" cellspacing="5">
+    		<tr>
+    			<td align="right">服务器地址:</td>
+				<td><input value="<?php echo empty($account['db_host'])?'localhost':$account['db_host']; ?>" disabled="false">
+					<input type="hidden" name="db_host" id="db_host" value="<?php echo empty($account['db_host'])?'localhost':$account['db_host']; ?>"></td>
+    		</tr>
+			<tr>
+    			<td align="right">数据库名:</td>
+				<td><input value="{$account.contract_number}" disabled="false">
+					<input type="hidden" name="db_name" id="db_name" value="{$account.contract_number}"></td>
+    		</tr>
+			<tr>
+    			<td align="right">端口:</td>
+				<td><input value="<?php echo empty($account['db_port'])?'3306':$account['db_port']; ?>" disabled="false">
+					<input type="hidden" name="db_port" id="db_port" value="<?php echo empty($account['db_port'])?'3306':$account['db_port']; ?>"></td>
+    		</tr>
+			<tr>
+    			<td align="right">表前缀:</td>
+				<td><input value="y_" disabled="false">
+					<input type="hidden" name="db_prefix" id="db_prefix" value="y_"></td>
+    		</tr>
+			<tr>
+    			<td align="right">用户名:</td>
+				<td><input value="root" disabled="false"></td>
+    		</tr>
+			<tr>
+    			<td align="right">密码:</td>
+				<td><input type="password" value="11111111111111" disabled="false"></td>
+    		</tr>
+			<tr>
+    			<td></td>
+				<td><input type="submit" value="保存并下一步" id="database_button" style="height:30px;"></td>
+    		</tr>
+    	</table>
+		</form>
+    </div>
+  </div>
+  <div id="test2-header" class="accordion_headings" >Step3 网站多语言配置</div>
+  <div id="test2-content">
+    <div class="accordion_child">
+    	<table id="lang_table" class="language_table" cellspacing="5" width="100%">
+			<tr><td><h3>电脑版</h3></td><td><a href="javascript:;" onclick="parent.goToMainFrame('__APP__/Lang/edit/account_id/{$account.id}/pid/3');">添加语言</a></td></tr>
+    		<tr>
+    			<th>状态</th>
+    			<th>语言名称</th>
+				<th>别名</th>
+				<th>排序</th>
+				<th>操作</th>
+    		</tr>
+			<volist name="langList" id="vo">
+			<eq name="vo['pid']" value="3">
+			<tr>
+				<th><input type="checkbox" name="pc_langs" value="{$vo.is_publish}" disabled="false"></th>
+    			<td style="<?php if($vo['is_default']==1){echo 'color:red;';} ?>">{$vo.title}</td>
+				<td>{$vo.alias}</td>
+				<td>{$vo.ordernum}</td>
+				<td><a href="javascript:;" onclick="parent.goToMainFrame('__APP__/Lang/edit/pid/3/account_id/{$account.id}/id/{$vo.id}');">修改</a>
+				 | <a href="javascript:;" name="lang_delete" id="{$vo.id}">删除</a></td>
+    		</tr>
+			</eq>
+			</volist>
+			<tr>
+    			<th colspan="5" valign="top" align="right" height="30"></th>
+    		</tr>
+			<tr><td><h3>手机版</h3></td><td><a href="javascript:;" onclick="parent.goToMainFrame('__APP__/Lang/edit/account_id/{$account.id}/pid/4');">添加语言</a></td></tr>
+			<volist name="langList" id="vo">
+			<eq name="vo['pid']" value="4">
+			<tr>
+				<th><input type="checkbox" name="m_langs" value="{$vo.is_publish}" disabled="false"></th>
+    			<td style="<?php if($vo['is_default']==1){echo 'color:red;';} ?>">{$vo.title}</td>
+				<td>{$vo.alias}</td>
+				<td>{$vo.ordernum}</td>
+				<td><a href="javascript:;" onclick="parent.goToMainFrame('__APP__/Lang/edit/pid/4/account_id/{$account.id}/id/{$vo.id}');">修改</a>
+				 | <a href="javascript:;" name="lang_delete" id="{$vo.id}">删除</a></td>
+    		</tr>
+			</eq>
+			</volist>
+			<tr>
+				<td colspan="5"><input type="button" value="保存并下一步" onclick="accordian.nextTab();" style="height:30px;"></td>
+    		</tr>
+    	</table>
+    </div>
+  </div>
+  <div id="test3-header" class="accordion_headings" >Step4 添加网站导航栏</div>
+  <div id="test3-content">
+    <div class="accordion_child">
+    	<table class="language_table" cellspacing="5" width="100%">
+    		<tr>
+    			<td><h3>导航栏</h3></td>
+				<td><a href="javascript:;" onclick="parent.goToMainFrame('__APP__/Category/editNav/account_id/{$account.id}');">添加导航</a></td>
+			</tr>
+    		<tr>
+    			<th>状态</th>
+				<th>导航名称</th>
+				<th>模型</th>
+				<th>排序</th>
+				<th>操作</th>
+    		</tr>
+			<volist name="moduleList" id="vo">
+			<tr>
+				<th><input type="checkbox" name="module_publish" value="{$vo.is_publish}" disabled="false"></th>
+				<td>{~getDefNavTitle(json_decode($vo['title'],true),$_SESSION['c_lang'])}</td>
+				<td>{~getModelTitle($vo['module'])}</td>
+				<td>{$vo.ordernum}</td>
+				<td><a href="javascript:;" onclick="parent.goToMainFrame('__APP__/Category/editNav/account_id/{$account.id}/id/{$vo.id}');">修改</a>
+				 | <a href="javascript:;" name="module_delete" id="{$vo.id}">删除</a></td>
+    		</tr>
+			</volist>
+			<tr>
+				<td colspan="5"><input type="button" value="保存并下一步" onclick="accordian.nextTab();" style="height:30px;"></td>
+    		</tr>
+    	</table>
+    </div>
+  </div>
+  <div id="test4-header" class="accordion_headings" >Step5 系统功能定制</div>
+  <div id="test4-content">
+    <div class="accordion_child">
+    	<table class="" cellspacing="5">
+			<tr>
+    			<td align="right">网站导航:</td>
+				<td>
+					<select id="module_category" name="module_category" onclick="changeCategory(this,'one_category')" multiple="multiple" style="height:150px;width:235px">
+						<volist name="moduleList2" id="vo">
+						<option value="{$vo.id}">{~getDefNavTitle(json_decode($vo['title'],true),$_SESSION['c_lang'])}</option>
+						</volist>
+					</select>
+				</td>
+    		</tr>
+    		<tr>
+    			<td align="right">一级栏目:</td>
+				<td>
+					<select id="one_category" name="one_category" onclick="changeCategory(this,'two_category')" multiple="multiple" style="height:200px;width:235px"></select>
+				</td>
+    		</tr>
+			<tr>
+    			<td align="right">二级栏目:</td>
+				<td>
+					<select id="two_category" name="two_category" onclick="changeCategory(this,'three_category')" multiple="multiple" style="height:100px;width:235px"></select>
+				</td>
+    		</tr>
+			<tr>
+    			<td align="right">三级栏目:</td>
+				<td>
+					<select id="three_category" name="three_category" onclick="changeCategory(this,'')" multiple="multiple" style="height:100px;width:235px"></select>
+				</td>
+    		</tr>
+            <!--tr>
+            	<td align="right">定义栏目:</td>
+                <td>
+                	<a href="javascript:void(0);" onClick="changeAddPart()">点击添加</a>&nbsp;&nbsp;&nbsp;
+                	<a href="javascript:void(0);" onClick="changePart()">点击查看</a>
+                </td>
+            </tr-->
+    	</table>
+    </div>
+  </div>
+  <div id="test5-header" class="accordion_headings" >Step6 正式空间参数设置</div>
+  <div id="test5-content">
+    <div class="accordion_child">
+    	<form id="space_form" action="__APP__/Account/saveSpace" method="post" class="form">
+    	<table class="" cellspacing="5">
+    		<tr>
+    			<td align="right">开通空间时间:</td>
+				<td><input name="begin_time" id="begin_time" value="<?php echo empty($account['begin_time'])?date('Y-m-d',time()):date('Y-m-d',$account['begin_time']); ?>" onClick="WdatePicker()"></td>
+    		</tr>
+			<tr>
+    			<td align="right">空间到期时间:</td>
+				<td><input name="end_time" id="end_time" value="<?php echo empty($account['end_time'])?date('Y-m-d',strtotime('1 year')):date('Y-m-d',$account['end_time']); ?>" onClick="WdatePicker()"></td>
+    		</tr>
+    		<tr>
+    			<td align="right">空间容量:</td>
+				<td><input name="space_mb" id="space_mb" value="<?php echo empty($account['space_mb'])?'3000':$account['space_mb']; ?>"> MB</td>
+    		</tr>
+			<tr>
+    			<td></td>
+				<td><input type="submit" value="保存更改" style="height:30px;"></td>
+    		</tr>
+    	</table>
+		</form>
+    </div>
+  </div>
+  
+</div>
+</form>
+
+<script>
+var accordian=null;
+jQuery(function(){
+	
+	accordian = new Accordian();
+	accordian.init('basic-accordian',5,'header_highlight');
+	var tab_id = "<?php echo $_GET['tab_id']; ?>";
+	if (tab_id != '') {
+		accordian.openTab(tab_id);
+		//accordian.nextTab();
+	} else {
+		accordian.openTab('test');
+	}
+	
+	jQuery.each(jQuery('input[name=pc_langs]'), function(i,v){
+		if(jQuery(this).val()==1) {
+			jQuery(this).attr('checked',true);
+		}
+	});
+	
+	jQuery.each(jQuery('input[name=m_langs]'), function(i,v){
+		if(jQuery(this).val()==1) {
+			jQuery(this).attr('checked',true);
+		}
+	});
+	
+	jQuery.each(jQuery('input[name=module_publish]'), function(i,v){
+		if(jQuery(this).val()==1) {
+			jQuery(this).attr('checked',true);
+		}
+	});
+	
+
+	jQuery('a[name=lang_delete]').click(function(){
+		if ( confirm('是否要删除此语言！') ) {
+			var a_elem = jQuery(this);
+			var id = a_elem.attr('id');
+			jQuery.get('__APP__/Lang/delete', {'id': id}, function(result){
+				if (result == 'success_delete') {
+					a_elem.parent().parent().remove();
+				}
+				else {
+					alert('删除语言失败');
+				}
+			});
+		}
+	});
+	
+	jQuery('a[name=module_delete]').click(function(){
+		if ( confirm('是否要删除此导航！') ) {
+			var a_elem = jQuery(this);
+			var id = a_elem.attr('id');
+			jQuery.getJSON('__APP__/Category/delete', {'id': id}, function(json){
+				if (json.result == 'success_delete') {
+					a_elem.parent().parent().remove();
+				} else {
+					alert('删除导航失败');
+				}
+			});
+		}
+	});
+	
+	jQuery('#website_form,#database_form,#space_form').ajaxForm({
+		dataType: 'json',
+		beforeSubmit: function(arr, $form, options) {
+			var account_id = jQuery('input[name=account_id]').val();
+			if( account_id == '' ) {
+				if( confirm('确认要添加一个新的网站吗？') ) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				var tab_id = window.getCurrentTabId();
+				if( tab_id=='test1-header') {
+					jQuery('#database_button').attr('disabled','disabled').val('正在请求创建数据库,请耐心等待...').css('color','red');
+				}
+				return true;
+			}
+		},
+	    success: function(json){
+			if (json.result == "success_add") {
+				parent.goToMainFrame('__APP__/Index/main');
+				parent.goToLeftFrame('__APP__/Account/edit/id/'+json.id+'/tab_id/test1');
+	        }else if(json.result == "error_add") {
+				alert('创建网站失败,可能已经存在了！');
+	        }else if(json.result == "success_update") {
+				var tab_id = window.getCurrentTabId()
+				if (tab_id == 'test-header') {
+					parent.goToLeftFrame('__APP__/Account/edit/id/'+json.id+'/tab_id/test1');
+				}else 
+					if (tab_id == 'test1-header') {
+						if (json.isConnect == true) {
+							parent.goToMainFrame('__APP__/Index/main');
+							parent.goToLeftFrame('__APP__/Account/edit/id/' + json.id + '/tab_id/test2');
+						}
+						else {
+							jQuery('#test1-header').css('background-color', 'red');
+						}
+					}else {
+						parent.goToMainFrame('__APP__/Index/main');
+					}
+				
+	        }else if(json.result == "error_update") {
+				alert('更新网站失败！');
+	        }else if(json.result == "error_database") {
+				alert('连接数库失败！');
+	        }else if(json.result == "error_connent") {
+				alert('修改密码失败！无法连接当前用户数据库');
+				parent.goToLeftFrame('__APP__/Account/edit/id/'+json.id+'/tab_id/test1');
+			}
+	    }
+	});
+	
+	jQuery('input[name=modules]').change(function(){
+        var modules = new Array(), i = 0;
+        jQuery('input[name=modules]:checked').each(function(){
+            if (jQuery(this).attr('checked') != undefined) {
+                modules[i] = jQuery(this).attr('value');
+                i++;
+            }
+        });
+		var account_id = jQuery('input[name=account_id]').val();
+		if( !account_id ) {
+			alert('请按照步骤创建网站！');
+		}
+        jQuery.getJSON("__APP__/Category/checkedModule", {'modules[]': modules, 'id':account_id}, function(json){
+            jQuery('#module_category').html('');
+            jQuery('#module_category').append('<option value="" selected>请选择</option>');
+            jQuery(json).each(function(i, obj){
+                jQuery('#module_category').append('<option value="' + obj.id + '">' + obj.title + '</option>');
+            });
+        });
+    });
+	/*
+	jQuery('input[name=pc_langs],input[name=m_langs]').change(function(){
+        var langs = new Array(), i = 0;
+		var lang_name = jQuery(this).attr('name');
+        jQuery('input[name='+lang_name+']:checked').each(function(){
+            if (jQuery(this).attr('checked') != undefined) {
+                langs[i] = jQuery(this).attr('value');
+                i++;
+            }
+        });
+		var account_id = jQuery('input[name=account_id]').val();
+		if( !account_id ) {
+			alert('请按照步骤创建网站！');
+		}
+        jQuery.getJSON("__APP__/Lang/getAccountLangs", {'langs[]': langs, 'id':account_id,'field':lang_name}, function(json){
+
+        });
+    });*/
+	
+});
+
+var category_target_id = '',category_this = '';
+function changeCategory(_this, target_id){
+	window.category_target_id = target_id;
+	window.category_this = _this;
+    if (target_id == 'one_category') {
+		jQuery('#two_category').html('');
+        jQuery('#three_category').html('');
+    }
+	var account_id = jQuery('input[name=account_id]').val();
+	var id = _this;
+	if( typeof(_this)=='object' ) {
+		id = jQuery(_this).val()[0];
+		parent.goToMainFrame('__APP__/Category/edit/id/'+id+'/aid/'+account_id);
+	}
+    jQuery.getJSON("__APP__/Category/selectCategoryByPid", {"id": id}, function(json){
+        jQuery('#' + target_id).html('');
+        var is_fixed = '';
+        jQuery(json.list).each(function(i, obj){
+            if (obj.is_fixed == '1') {
+                is_fixed = 'color:red;';
+            } else {
+                is_fixed = '';
+            }
+            var str_tr = '<option value="' + obj.id + '" style="' + is_fixed + '">' + obj.title + '</option>';
+            jQuery('#' + target_id).append(str_tr);
+        });
+    });
+}
+function changePart(){
+	parent.goToMainFrame('__APP__/Category/part');
+}
+function changeAddPart(){
+	parent.goToMainFrame('__APP__/Category/addPart');
+}
+function reloadCategoryOption(pid) {
+	window.changeCategory(pid,window.category_target_id);
+}
+
+function reloadCategoryOption2() {
+	var elem_id = window.category_this.id;
+	var pid='';
+	if( elem_id == 'one_category' ) {
+		 pid=jQuery('#module_category').val();
+	} else if( elem_id == 'two_category' ) {
+		 pid=jQuery('#one_category').val();
+	} else if( elem_id == 'three_category' ) {
+		 pid=jQuery('#two_category').val();
+	}
+}
+
+function deleteCategoryOption(id){
+	jQuery(category_this).find('option[value='+id+']').remove();
+}
+
+function reloadLangTable() {
+	jQuery.getJSON("__APP__/Lang/selectLang", {}, function(json){
+        jQuery(json.list).each(function(i, obj){
+            jQuery('#lang_table').append('<tr><th><input type="checkbox" name="langs" value="'+obj.alias+'"></th><td>'+obj.title+'</td><td>'+obj.alias+'</td><td>'+obj.ordernum+'</td><td><a href="javascript:;" onclick="parent.goToMainFrame(\"__APP__/Lang/edit/id/'+obj.id+'\");">修改</a> | <a href="javascript:;" name="lang_delete" id="'+obj.id+'">删除</a></td></tr>');
+        });
+    });
+}
+
+var isConnect = false;
+function formValidation() {
+	
+	var tab_id = window.getCurrentTabId();
+	if( tab_id=='test-header' ) {
+		var website_name = jQuery('#website_name').val();
+		var url = jQuery('#url').val();
+		var contract_number = jQuery('#contract_number').val();
+		var username = jQuery('#username').val();
+		if( website_name=='' || url=='' || contract_number=='' || username=='' ) {
+			alert('请填写完整网站帐号信息！');
+			accordian.openTab('test');
+			return false;
+		}
+	}
+	if ( tab_id != 'test-header') {
+		var db_host = jQuery('#db_host').val();
+		var db_name = jQuery('#db_name').val();
+		var db_port = jQuery('#db_port').val();
+		var db_prefix = jQuery('#db_prefix').val();
+		var db_user = jQuery('#db_user').val();
+		if (db_host == '' || db_name == '' || db_port == '' || db_prefix == '' || db_user == '') {
+			alert('请填写完整连接数据库信息！');
+			accordian.openTab('test1');
+			return false;
+		} else {
+			var account_id = jQuery('input[name=account_id]').val();
+			
+			var bool = jQuery.ajax({url:'__APP__/Account/isConnect/id/'+account_id,dataType:'text',async:false}).responseText;
+
+			return bool;
+		}
+	} else {
+		return true;
+	}
+	
+}
+
+function getCurrentTabId() {
+	var tab_id='';
+	var tab_header = jQuery("#basic-accordian div[id$='-header']");
+	jQuery.each(tab_header, function(i,v){
+		var hclass = jQuery(v).attr('class');
+		if(hclass.indexOf('header_highlight')>0) {
+			tab_id = jQuery(v).attr('id');
+		}
+		
+	});
+	return tab_id;
+}
+
+</script>
+
+</body>
+</html>

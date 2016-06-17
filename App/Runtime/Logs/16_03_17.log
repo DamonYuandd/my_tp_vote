@@ -1,0 +1,761 @@
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: newsCid IndexAction.class.php 第 78 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1527' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1515' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1516' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1517' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1518' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1519' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1520' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1521' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1522' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1523' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1524' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1525' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1526' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` IN ('20','1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526') ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_goods` [ RunTime:0.003001s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_goods` WHERE ( `category_id` IN ('20','1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','1516','1253','1515','1251','1249','1255','1257','1401','1402','1409','1411','1412','1413','1414','1422','1423','1468','1469','1470','1471','1472','1473','1474','1475','1476','1477','1478','1479','1490','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','1527') ) AND ( `is_home` = 1 ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY is_top desc, ordernum desc, create_time desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About/indexInfo' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1170' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2] Missing argument 1 for GoodsCate(), called in F:\WWW\puji\App\Lib\Action\Home\IndexAction.class.php on line 42 and defined common.php 第 271 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: num common.php 第 281 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc, id desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'News' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '19' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: newsCid IndexAction.class.php 第 57 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_news` WHERE category_id in (19,1175,1176) and lang = 'zh-cn' and is_home = 1 ORDER BY is_top desc, ordernum desc, create_time desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_advert` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'index/adList' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1168' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT COUNT(*) AS tp_count FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,5  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','23','1168') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'index/adList' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1168' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT COUNT(*) AS tp_count FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,5  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','23','1168') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:09+08:00 ] /puji/ | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001001s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:11+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003001s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid CategoryWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: id OneWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid OneWidget.class.php 第 10 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1528' ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: UPDATE `y_news` SET `click_count`=click_count+1 WHERE ( `id` = '15' ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT `id`,`title`,`alias` FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) AND ( `is_publish` = 1 ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid function.php 第 201 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_news` WHERE ( `lang` = 'zh-cn' ) AND ( `category_id` = null ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_news` WHERE ( `id` = null ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:16+08:00 ] /puji/About | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.004001s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid CategoryWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) ORDER BY id asc [ RunTime:0.001001s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: id OneWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid OneWidget.class.php 第 10 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1528' ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: UPDATE `y_news` SET `click_count`=click_count+1 WHERE ( `id` = '15' ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT `id`,`title`,`alias` FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) AND ( `is_publish` = 1 ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid function.php 第 201 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_news` WHERE ( `lang` = 'zh-cn' ) AND ( `category_id` = null ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_news` WHERE ( `id` = null ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:33+08:00 ] /puji/About | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.005001s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: newsCid IndexAction.class.php 第 78 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1527' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1515' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1516' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1517' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1518' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1519' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1520' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1521' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1522' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1523' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1524' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1525' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1526' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` IN ('20','1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526') ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_goods` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_goods` WHERE ( `category_id` IN ('20','1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','1516','1253','1515','1251','1249','1255','1257','1401','1402','1409','1411','1412','1413','1414','1422','1423','1468','1469','1470','1471','1472','1473','1474','1475','1476','1477','1478','1479','1490','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','1527') ) AND ( `is_home` = 1 ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY is_top desc, ordernum desc, create_time desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About/indexInfo' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1170' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2] Missing argument 1 for GoodsCate(), called in F:\WWW\puji\App\Lib\Action\Home\IndexAction.class.php on line 42 and defined common.php 第 271 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: num common.php 第 281 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc, id desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'News' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '19' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: newsCid IndexAction.class.php 第 57 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_news` WHERE category_id in (19,1175,1176) and lang = 'zh-cn' and is_home = 1 ORDER BY is_top desc, ordernum desc, create_time desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_advert` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'index/adList' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1168' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT COUNT(*) AS tp_count FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,5  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','23','1168') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'index/adList' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1168' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT COUNT(*) AS tp_count FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,5  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','23','1168') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:35+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.002001s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:37+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid CategoryWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: id OneWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid OneWidget.class.php 第 10 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1528' ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: UPDATE `y_news` SET `click_count`=click_count+1 WHERE ( `id` = '15' ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT `id`,`title`,`alias` FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) AND ( `is_publish` = 1 ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid function.php 第 201 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_news` WHERE ( `lang` = 'zh-cn' ) AND ( `category_id` = null ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_news` WHERE ( `id` = null ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:39+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003001s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid CategoryWidget.class.php 第 9 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','20','1527') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_goods` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1527' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1515' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1516' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1517' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1518' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1519' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1520' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001001s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1521' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1522' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1523' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1524' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1525' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1526' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT COUNT(*) AS tp_count FROM `y_goods` WHERE ( `category_id` IN ('1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','20') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_goods` WHERE ( `category_id` IN ('1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','20') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,8  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','20') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:53+08:00 ] /puji/index.php/Goods | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` = '1526' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','20','1526') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_goods` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` = '1526' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_goods` WHERE ( `id` = '69' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: UPDATE `y_goods` SET `click_count`=click_count+1 WHERE ( `id` = '69' ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT `id`,`title`,`alias` FROM `y_category` WHERE ( `id` IN ('12','20','1526') ) AND ( `is_publish` = 1 ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_goods_photo` [ RunTime:0.002000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_goods_photo` WHERE ( `goods_id` = '69' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003001s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` = '1526' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1526' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('1526') ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc, id desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT COUNT(*) AS tp_count FROM `y_goods` WHERE ( `category_id` IN ('1526Array','1526') ) AND ( `is_top` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_goods` WHERE ( `category_id` IN ('1526Array','1526') ) AND ( `is_top` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','20','1526') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_goods` WHERE ( `id` = '69' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.003000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:03:56+08:00 ] /puji/index.php/Goods/show/cid/1526/id/69.html | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.004000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid CategoryWidget.class.php 第 9 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003001s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: id OneWidget.class.php 第 9 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid OneWidget.class.php 第 10 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '36' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1528' ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: UPDATE `y_news` SET `click_count`=click_count+1 WHERE ( `id` = '15' ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT `id`,`title`,`alias` FROM `y_category` WHERE ( `id` IN ('12','36','1528') ) AND ( `is_publish` = 1 ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid function.php 第 201 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_news` WHERE ( `lang` = 'zh-cn' ) AND ( `category_id` = null ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_news` WHERE ( `id` = null ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:00+08:00 ] /puji/index.php/About | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.002000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001001s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Contact/mode' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: cid CategoryWidget.class.php 第 9 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Contact' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '28' ) AND ( `is_publish` = 1 ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '28' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','28','1395') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: cid 2a15d8ebe285d06a458da85105d74637.php 第 11 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.002000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: id OneWidget.class.php 第 9 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: cid OneWidget.class.php 第 10 行.
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Contact' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '28' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc LIMIT 0,1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1395' ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: UPDATE `y_news` SET `click_count`=click_count+1 WHERE ( `id` = '13' ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | SQL: SELECT `id`,`title`,`alias` FROM `y_category` WHERE ( `id` IN ('12','28','1395') ) AND ( `is_publish` = 1 ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:21+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: cid dd1a8fa53e44e04801a2d31165472ba2.php 第 1 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.002000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.001000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:04:22+08:00 ] /puji/index.php/Contact | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.004000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001001s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.002000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.004000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: newsCid IndexAction.class.php 第 78 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1527' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1515' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1516' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1517' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1518' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1519' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1520' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1521' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1522' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1523' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1524' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1525' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1526' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` IN ('20','1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526') ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_goods` [ RunTime:0.003000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_goods` WHERE ( `category_id` IN ('20','1527','1515','1516','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','1516','1253','1515','1251','1249','1255','1257','1401','1402','1409','1411','1412','1413','1414','1422','1423','1468','1469','1470','1471','1472','1473','1474','1475','1476','1477','1478','1479','1490','1517','1518','1519','1520','1521','1522','1523','1524','1525','1526','1527') ) AND ( `is_home` = 1 ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY is_top desc, ordernum desc, create_time desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'About/indexInfo' ) AND ( `is_publish` = 1 ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_news` [ RunTime:0.003000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_news` WHERE ( `category_id` = '1170' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [2] Missing argument 1 for GoodsCate(), called in F:\WWW\puji\App\Lib\Action\Home\IndexAction.class.php on line 42 and defined common.php 第 271 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Goods' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: num common.php 第 281 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '20' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) ORDER BY ordernum desc, id desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'News' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '19' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) AND ( `lang` = 'zh-cn' ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: newsCid IndexAction.class.php 第 57 行.
+[ 2016-03-17T10:06:04+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_news` WHERE category_id in (19,1175,1176) and lang = 'zh-cn' and is_home = 1 ORDER BY is_top desc, ordernum desc, create_time desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.004000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_advert` [ RunTime:0.029002s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'index/adList' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1168' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT COUNT(*) AS tp_count FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,5  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','23','1168') ) ORDER BY id asc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'index/adList' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1168' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT COUNT(*) AS tp_count FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_advert` WHERE ( `category_id` IN ('1168') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,5  [ RunTime:0.001001s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','23','1168') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: id 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: headTitle 088e6b7781346a9273d18ce81bf9a61b.php 第 2 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SHOW COLUMNS FROM `y_link` [ RunTime:0.003000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: cid ListWidget.class.php 第 17 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'Link/info' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '1169' ) AND ( `hardware` = 'pc' ) AND ( `lang` = 'zh-cn' ) ORDER BY ordernum desc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [2] Invalid argument supplied for foreach() CategoryModel.class.php 第 52 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: Number ListWidget.class.php 第 24 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isHome ListWidget.class.php 第 70 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_top ListWidget.class.php 第 74 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: isTop ListWidget.class.php 第 78 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: search_key ListWidget.class.php 第 81 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined index: is_home ListWidget.class.php 第 89 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT COUNT(*) AS tp_count FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_link` WHERE ( `category_id` IN ('1169') ) AND ( `lang` = 'zh-cn' ) AND ( `is_publish` = 1 ) ORDER BY is_top desc, ordernum desc, create_time desc,id desc LIMIT 0,20  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [2048] Creating default object from empty value ListWidget.class.php 第 108 行.
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | SQL: SELECT * FROM `y_category` WHERE ( `id` IN ('12','24','1169') ) ORDER BY id asc [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:05+08:00 ] /puji/index.php | NOTIC: [8] Undefined variable: isOne ListWidget.class.php 第 126 行.
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_account` [ RunTime:0.003000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_category` [ RunTime:0.003000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_common` [ RunTime:0.003000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SHOW COLUMNS FROM `y_system` [ RunTime:0.002001s ]
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:06:06+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_account` WHERE ( `url` LIKE '%,localhost,%' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `is_publish` = '1' ) AND ( `is_nav` = 1 ) AND ( `hardware` NOT IN ('mobile') ) ORDER BY orderNum desc [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: part3 HomeAction.class.php 第 195 行.
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `alias` = 'pc' ) AND ( `is_publish` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_category` WHERE ( `pid` = '3' ) AND ( `hardware` = 'pc' ) AND ( `is_publish` = 1 ) [ RunTime:0.001000s ]
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_common` LIMIT 1  [ RunTime:0.000000s ]
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined variable: commonInfo HomeAction.class.php 第 38 行.
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [8] Undefined index: url HomeAction.class.php 第 43 行.
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | NOTIC: [2] Missing argument 2 for HomeAction::assignSystem(), called in F:\WWW\puji\App\Lib\Action\HomeAction.class.php on line 47 and defined HomeAction.class.php 第 94 行.
+[ 2016-03-17T10:06:07+08:00 ] /puji/Public/images/advert/m_5236d4e8d0d30.jpg | SQL: SELECT * FROM `y_system` WHERE ( `lang` = 'zh-cn' ) AND ( `hardware` = 'pc' ) LIMIT 1  [ RunTime:0.001000s ]

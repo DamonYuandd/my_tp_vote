@@ -1,0 +1,57 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body {
+	font-family: Verdana, "Trebuchet MS", Tahoma, Arial;
+	font-size: 12px;
+}
+.header {
+	background: #000;
+	cursor: pointer;
+	padding:4px;
+}
+
+.header:hover{
+	background-color:#666;
+}
+.selected{
+	background-color:#F00;
+	color:#FFF;
+}
+
+.content{
+	background:#FFF;
+	padding:4px;
+}
+
+#basic-accordian{
+}
+
+.accordion_headings{
+	padding:5px;
+	background:#99CC00;
+	color:#FFFFFF;
+	border:1px solid #FFF;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.accordion_headings:hover{
+	background:#00CCFF;
+}
+
+.accordion_child{
+	padding:15px;
+	background:#EEE;
+}
+
+.header_highlight{
+	background:#00CCFF;
+}
+
+
+/*---------------------------------------------------------*/
+.accordion_child td input{width:250px}
+.language_table td{text-align:center;}

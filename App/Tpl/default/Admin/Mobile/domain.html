@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>手机基本设置</title>
+
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+<script src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+<script src="__ADMIN__/Public/js/base.js"></script>
+<script src="__ADMIN__/Public/js/index.js"></script>
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])}</div>
+<table class="grid-function" border="0" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th width="600">
+                <div class="qw-fl grid-add-data">
+                	<input class="button-img-add" type="button"  value="添加域名" onclick="goToUrl('__APP__/Admin/Mobile/edit_domain')">
+                </div>
+                <div class="qw-fl grid-batch-operate"> </div>
+                <div class="qw-fr"> </div>
+            </th>
+        </tr>
+    </thead>
+</table>
+<table class="grid-table" border="1" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th width="35">编号</th>
+            <th>选择类型</th>
+            <th>域名</th>
+            <th>备注</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+<tbody>
+	<volist name="domain" id="vo">
+    <tr>
+        <td>{$i}</td>
+        <td>{$vo.target}</td>
+        <td>{$vo.domain_name}</td>
+        <td>{$vo.remark}</td>
+        <td>
+        	<a href="__APP__/Admin/Mobile/edit_domain/id/{$vo.id}">
+				<img src="__ADMIN__/Public/imgs/edit.png">
+			</a>
+			<a onclick="javascript:deleteData('__APP__/Admin/Mobile/deleteDomain/id/{$vo.id}');" href="#">
+				<img src="__ADMIN__/Public/imgs/cross.png">
+			</a>
+        </td>
+    </tr>
+    </volist>
+</tbody>
+</table>
+<style>
+.grid-table tbody tr td a
+{
+	text-decoration:none;
+}
+</style>
+
+</body>
+</html>

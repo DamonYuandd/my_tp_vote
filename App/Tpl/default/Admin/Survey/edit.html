@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>在线调查编辑</title>
+
+<layout name="Inc:edit_page" cache="0" />
+
+<script>
+function answer_sel(m){
+	
+	if(m==3){
+		$('#answer').hide();
+	}else{
+		$('#answer').show();
+	}
+	
+	$('#answer_type_val').val(m);
+	
+}
+function arrTojson(arr){
+    var i,jsonstr;
+    jsonstr="{";
+    for(i=0;i<arr.length;i++){
+        jsonstr += "\"" + i + "\""+ ":" + "\"" + arr[i] + "\",";
+    }
+    jsonstr = jsonstr.substring(0,jsonstr.lastIndexOf(','));
+    jsonstr += "}";
+    
+    return jsonstr;
+}
+function del_ques(m,qid){
+	var mid = '#questit'+m	
+	var quesnum = $('#ques_num').val();	
+	var new_qnum = quesnum * 1 - 1;	
+	$('span').remove(mid); 
+	$('#ques_num').val(new_qnum);
+	
+	var j=1;var new_ques = '';
+	for(var i=1;i<=quesnum;i++){		
+		if(i!=m){								
+			var gtitle = $('#ques_title'+i).val();
+			var gquesid = $('#ques_id'+i).val();
+			var ganswertype1 = $('#answer_type1'+i).attr('checked');	
+			var ganswertype2 = $('#answer_type2'+i).attr('checked');
+			var ganswertype3 = $('#answer_type3'+i).attr('checked');
+			 													
+			new_ques += "<span id='questit"+j+"'>";
+			new_ques += "<label></label><span>"+j+". <input id='ques_title"+j+"' name='ques_title[]' value='"+gtitle+"' class='type-text'/></span><img src='__ADMIN__/Public/imgs/cross.png' title='删除问题' onclick='del_ques("+j+","+gquesid+")'/><br>";				    
+			new_ques += "<input type='hidden' id='ques_id"+j+"' name='ques_id[]' value='"+gquesid+"'/>";
+			if(ganswertype3=='checked'){
+				
+				new_ques += "<label></label><input type='radio' id='answer_type1"+j+"' name='answer_type"+j+"' value='1'  onclick='add_answer(1,"+j+")'>答案单选";
+				new_ques += "<label></label><input type='radio' id='answer_type2"+j+"' name='answer_type"+j+"' value='2'  onclick='add_answer(2,"+j+")'>答案多选";
+				new_ques += "<label></label><input type='radio' id='answer_type3"+j+"' name='answer_type"+j+"' value='3' checked onclick='add_answer(3,"+j+")'>答案输入<br>";
+				new_ques += "<label></label><span id='ques"+j+"' style='display:none'></span><br>";
+			}else{
+				var radiochk1 = (ganswertype1 =='checked')?'checked':'';	    
+			    var radiochk2 = (ganswertype2 =='checked')?'checked':'';		   
+			   	var antit1 = $('#answer_title1'+i).val();
+			   	var antit2 = $('#answer_title2'+i).val();
+			   	var antit3 = $('#answer_title3'+i).val();
+			   	var antit4 = $('#answer_title4'+i).val();
+				var answer_id1 = $('#answer_id1'+i).val();
+				var answer_id2 = $('#answer_id2'+i).val();
+				var answer_id3 = $('#answer_id3'+i).val();
+				var answer_id4 = $('#answer_id4'+i).val();
+				
+				new_ques += "<label></label><input type='radio' id='answer_type1"+j+"' name='answer_type"+j+"' value='1' "+radiochk1+" >答案单选";
+				new_ques += "<label></label><input type='radio' id='answer_type2"+j+"' name='answer_type"+j+"' value='2' "+radiochk2+" >答案多选";
+				new_ques += "<label></label><input type='radio' id='answer_type3"+j+"' name='answer_type"+j+"' value='3' >答案输入<br>";
+				new_ques += "<label></label><input type='hidden' name='orderid"+j+"[]'  value='1'><input id='answer_title1"+j+"' name='answer_title"+j+"[]' value='"+antit1+"' size='40'><br>"	;		         	 
+				if(answer_id1!=undefined){
+					new_ques += "<input type='hidden' id='answer_id1"+j+"' name='answer_id"+j+"[]' value='"+answer_id1+"' size='40'><br>"	;
+				}
+				new_ques += "<label></label><input type='hidden' name='orderid"+j+"[]'  value='2'><input id='answer_title2"+j+"' name='answer_title"+j+"[]' value='"+antit2+"' size='40'><br>"	;
+				if(answer_id2!=undefined){
+					new_ques += "<input type='hidden' id='answer_id2"+j+"' name='answer_id"+j+"[]' value='"+answer_id2+"' size='40'><br>"	;
+				}
+				new_ques += "<label></label><input type='hidden' name='orderid"+j+"[]'  value='3'><input id='answer_title3"+j+"' name='answer_title"+j+"[]' value='"+antit3+"' size='40'><br>"	;
+				if(answer_id3!=undefined){
+					new_ques += "<input type='hidden' id='answer_id3"+j+"' name='answer_id"+j+"[]' value='"+answer_id3+"' size='40'><br>"	;
+				}
+				new_ques += "<label></label><input type='hidden' name='orderid"+j+"[]'  value='4'><input id='answer_title4"+j+"' name='answer_title"+j+"[]' value='"+antit4+"' size='40'><br><br>"	;
+				if(answer_id4!=undefined){
+					new_ques += "<input type='hidden' id='answer_id4"+j+"' name='answer_id"+j+"[]' value='"+answer_id4+"' size='40'><br>"	;
+				}
+			}
+			
+			new_ques += "</span>";
+			j++;										
+		}					 	
+	}
+	var del_id = $('#del_ques_id').val();
+	$('#del_ques_id').val(qid+','+del_id);
+	$('#ques_list').html(new_ques);	
+}
+function add_ques(){
+	var que_tit = $('#ques_title').val();
+	var antype = $('#answer_type_val').val();
+	var ord1 = $('#orderid1').val();
+	var ord2 = $('#orderid2').val();
+	var ord3 = $('#orderid3').val();
+	var ord4 = $('#orderid4').val();
+	var antit1 = $('#answer_title1').val();
+	var antit2 = $('#answer_title2').val();
+	var antit3 = $('#answer_title3').val();
+	var antit4 = $('#answer_title4').val();
+
+	if(que_tit ==''){
+		alert('请填写问题标题');
+		return false;				
+	}
+    if($('#answer_type_val').val()==0){
+    	alert('请选择答案类型');
+		return false;	
+    }
+    var quesnum = $('#ques_num').val();
+    var num = quesnum*1 + 1;
+    var ques_str  = "<span id='questit"+num+"'>"
+        ques_str += "<label></label><span>"+num+". <input id='ques_title"+num+"' name='ques_title[]' value='"+que_tit+"' class='type-text'/></span><img src='__ADMIN__/Public/imgs/cross.png' title='删除问题' onclick='del_ques("+num+",'')'/><br>";
+	    
+	    var radiochk1 = (antype ==1)?'checked':'';	    
+	    var radiochk2 = (antype ==2)?'checked':'';		   
+	    var radiochk3 = (antype ==3)?'checked':'';
+	    	    
+    	if(antype!=3){
+    		ques_str += "<label></label><input type='radio' id='answer_type1"+num+"' name='answer_type"+num+"' value='1' "+radiochk1+" >答案单选";
+        	ques_str += "<label></label><input type='radio' id='answer_type2"+num+"' name='answer_type"+num+"' value='2' "+radiochk2+" >答案多选";
+        	ques_str += "<label></label><input type='radio' id='answer_type3"+num+"' name='answer_type"+num+"' value='3' "+radiochk3+" >答案输入<br>";
+    		ques_str += "<label></label><input type='hidden' name='orderid"+num+"[]'  value='1'><input id='answer_title1"+num+"' name='answer_title"+num+"[]' value='"+antit1+"' size='40'><br>"	;		         	 
+    		ques_str += "<label></label><input type='hidden' name='orderid"+num+"[]'  value='2'><input id='answer_title2"+num+"' name='answer_title"+num+"[]' value='"+antit2+"' size='40'><br>"	;
+    		ques_str += "<label></label><input type='hidden' name='orderid"+num+"[]'  value='3'><input id='answer_title3"+num+"' name='answer_title"+num+"[]' value='"+antit3+"' size='40'><br>"	;
+    		ques_str += "<label></label><input type='hidden' name='orderid"+num+"[]'  value='4'><input id='answer_title4"+num+"' name='answer_title"+num+"[]' value='"+antit4+"' size='40'><br><br>"	;	
+    	}else{
+    		ques_str += "<label></label><input type='radio' id='answer_type1"+num+"' name='answer_type"+num+"' value='1' "+radiochk1+" onclick='add_answer(1,"+num+")'>答案单选";
+        	ques_str += "<label></label><input type='radio' id='answer_type2"+num+"' name='answer_type"+num+"' value='2' "+radiochk2+" onclick='add_answer(2,"+num+")'>答案多选";
+        	ques_str += "<label></label><input type='radio' id='answer_type3"+num+"' name='answer_type"+num+"' value='3' "+radiochk3+" onclick='add_answer(3,"+num+")'>答案输入<br>";
+    		ques_str += "<label></label><span id='ques"+num+"' style='display:none'></span><br>";
+        }
+    	ques_str += "</span>";
+    	var queshtml = $('#ques_list').html();	
+     	$('#ques_list').html(queshtml+ques_str);
+     	$('#ques_num').val(num);
+     	$('#ques_title').val('');
+     	for(var i=1;i<5;i++){
+			$('#answer_title'+i).val('');
+			if(i<4){
+				$('#answer_type'+i).attr('checked',false);
+			}
+	 	}
+
+}
+
+function add_answer(n,m){
+	if(n!=3){
+	var	ques_str  = "<input type='hidden' name='orderid"+m+"[]'  value='1'><input id='answer_title1"+m+"' name='answer_title"+m+"[]' value='' size='40'><br>"	;		         	 
+		ques_str += "<input type='hidden' name='orderid"+m+"[]'  value='2'><input id='answer_title2"+m+"' name='answer_title"+m+"[]' value='' size='40'><br>"	;
+		ques_str += "<input type='hidden' name='orderid"+m+"[]'  value='3'><input id='answer_title3"+m+"' name='answer_title"+m+"[]' value='' size='40'><br>"	;
+		ques_str += "<input type='hidden' name='orderid"+m+"[]'  value='4'><input id='answer_title4"+m+"' name='answer_title"+m+"[]' value='' size='40'><br><br>"	;
+		$('#ques'+m).html(ques_str);
+		$('#ques'+m).show();
+	}else{
+		$('#ques'+m).html('');
+		$('#ques'+m).hide();
+	}
+
+	
+}
+</script>
+
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])} > 编辑内容</div>
+<form action="__APP__/Admin/Survey/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+<input type="hidden" name="id" value="{$obj.id}">
+<input type="hidden" name="my_id" value="{$obj.my_id}">
+<input type="hidden" name="one_category_id" value="{.cid}">
+<input type="hidden" name="lang" value="{.lang}">
+   <fieldset>
+       <ul class="align-list">
+           <li>
+               <label>主题</label>
+               <input type="text" id="title" name="title" value="{$obj.title}" class="type-text">
+           </li>
+            <li>
+               <label>描述</label>
+               <textarea id="description" name="description" rows='3' cols="20">{$obj.description}</textarea>
+           </li>
+           <li>
+               <label>有效期</label>
+               <input type="text" id="validity_time" name="validity_time" value="<?php if($obj['validity_time']!=''){ echo date('Y-m-d',$obj['validity_time']);}else{echo date('Y-m-d');} ?>" onClick="WdatePicker()">
+           </li>
+         
+           <div id="more_options_box" class="more-box" style="border:1px solid #CCC;">
+           <li>
+               <label>问题名称</label>
+               <input type="text" id="ques_title"  value="{$obj.ques_title}" style="height: 10px;" class="type-text">
+           </li>
+           <li><label></label>
+           <input type="radio"  id="answer_type1" name="answer_type" value="1" onclick="answer_sel(1)"> 答案单选  
+           <input type="radio"  id="answer_type2" name="answer_type" value="2" onclick="answer_sel(2)"> 答案多选
+           <input type="radio"  id="answer_type3" name="answer_type" value="3" onclick="answer_sel(3)"> 答案输入
+           <input type="hidden" id="answer_type_val"  value="0">
+           </li>
+           <li id="answer" style="display:none">
+           <label></label><input type="hidden" id="orderid1"  value="1"> <input id="answer_title1" value="" size="40"><br/>
+           <label></label><input type="hidden" id="orderid2" value="2"> <input id="answer_title2" value="" size="40"><br/>
+           <label></label><input type="hidden" id="orderid3" value="3"> <input id="answer_title3" value="" size="40"><br/>
+           <label></label><input type="hidden" id="orderid4" value="4"> <input id="answer_title4" value="" size="40">
+           </li>
+                  
+           <li>
+               <label></label>
+               
+               <input type="button" value="添加问题" class="button" onclick="return add_ques()"/>
+           </li>
+           </div>
+           <li>
+           <div class="more-title"><strong style="font-size:18px;">问题列表</strong></div>
+           <div id="ques_list">
+           <?php echo get_QuesListEdit($obj['id']);?>
+           </div>
+           <input type="hidden" id="quesid_str" name="quesid_str" value="<?php echo $ques_id;?>"/>
+           <input type="hidden" id="ques_num" name="ques_num" value="{$obj.ques_num}"/>
+           <input type="hidden" name="del_ques_id" id="del_ques_id" value="">
+           </li>
+           <li>
+               <label>现在发布<a href="#" class="issue" title="在网站前台显示">?</a></label>
+               <input type="checkbox" id="publish" name="publish"  onclick="set_publish()" <?php if($obj['is_publish']==1){echo 'checked';}?> >
+               <input type="hidden" id="is_publish" name="is_publish" value="{$obj.is_publish}">
+           </li>
+           <li>
+               <label></label>
+               <input type="submit" value="确定并保存" class="button button-green"/>
+               <input type="reset" value="重置" class="button button-red" />
+               <input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+</body>
+</html>

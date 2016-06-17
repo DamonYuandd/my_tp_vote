@@ -1,0 +1,237 @@
+<style>
+.contact_icon{
+margin-top: -30px;
+margin-left: 140px;
+overflow: hidden;
+}
+.contact_icon li{
+	float:left;
+	margin-right: 10px;
+	width: 40px;
+	text-align: center;
+	border:1px #FFF solid;
+	padding:3px 5px;
+}
+.contact_icon .now{ 
+border:1px #000 solid;
+border-bottom:0px;
+background:#36C;
+}
+.contact_icon .now a{color:#FFF;}
+</style>
+
+<div class="nav-site">{~getNavSite($nav_site,2)} &gt; 系统设置 &gt; 网站联系方式 &gt; 编缉内容</div>
+
+<form action="__APP__/Admin/<?php echo MODULE_NAME; ?>/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+<input type="hidden" id="id" name="id" value="{$obj.id}">
+<input type="hidden" name="category_id" value="{$_GET['cid']}">
+<input type="hidden" name="hardware" value="{$Think.session.hardware}">
+<input type="hidden" id="is_publish" name="is_publish" value="1">
+   <fieldset>
+       <ul class="align-list" id="contactInfo">
+       	   {~isLang()}
+           <li id="li_icon">
+               <label>选择信息</label>
+			   <ul class="contact_icon">
+				<li class="now"><a href="javascript:void(0)" gid="address">地址</a></li>
+				<li><a href="javascript:void(0)" gid="mail">邮箱</a></li>
+				<li><a href="javascript:void(0)" gid="phone">电话</a></li>
+				<li><a href="javascript:void(0)" gid="sina_weibo">微博</a></li>
+				<li><a href="javascript:void(0)" gid="fax">传真</a></li>
+				<li><a href="javascript:void(0)" gid="sms">短信</a></li>
+				<li><a href="javascript:void(0)" gid="ren">联系人</a></li>
+				<li><a href="javascript:void(0)" gid="url">网址</a></li>
+				<li><a href="javascript:void(0)" gid="code">邮编</a></li>
+                <li><a href="javascript:void(0)" gid="other">其他</a></li>
+			   </ul>
+           </li>
+		   <div id="address"> <!-- 地址 -->
+           <li style="display:none;">
+               <label>地址标题</label>
+               <input type="text" id="address_title" name="address_title" value="{$obj.address_title}" class="type-text">
+           </li>
+           <li>
+               <label>详细内容</label>
+               <textarea id="address_content" name="address_content" cols="100" rows="3">{$obj.address_content}</textarea>
+           </li>
+		   </div>
+           <div id="mail" style="display:none;">
+           <li>
+               <label>邮箱标题</label>
+               <input type="text" id="email_title" name="email_title" value="{$obj.email_title}" class="type-text">
+           </li>
+           <li>
+               <label>邮箱内容</label>
+               <textarea id="email_content" name="email_content" cols="100" rows="3">{$obj.email_content}</textarea>
+           </li>
+		   </div>
+           <div id="phone" style="display:none;">
+           <li>
+               <label>电话标题</label>
+               <input type="text" id="tel_title" name="tel_title" value="{$obj.tel_title}" class="type-text">
+           </li>
+           <li>
+               <label>电话内容</label>
+               <textarea id="tel_content" name="tel_content" cols="100" rows="3">{$obj.tel_content}</textarea>
+           </li>
+		   </div>
+           <div id="sina_weibo" style="display:none;">
+           <li>
+               <label>微博标题</label>
+               <input type="text" id="weibo_title" name="weibo_title" value="{$obj.weibo_title}" class="type-text">
+           </li>
+           <li>
+               <label>微博内容</label>
+               <textarea id="weibo_content" name="weibo_content" cols="100" rows="3">{$obj.weibo_content}</textarea>
+           </li>
+		   </div>
+           <div id="fax" style="display:none;">
+           <li>
+               <label>传真标题</label>
+               <input type="text" id="fax_title" name="fax_title" value="{$obj.fax_title}" class="type-text">
+           </li>
+           <li>
+               <label>传真内容</label>
+               <textarea id="fax_content" name="fax_content" cols="100" rows="3">{$obj.fax_content}</textarea>
+           </li>
+		   </div>
+           <div id="sms" style="display:none;">
+           <li>
+               <label>短信标题</label>
+               <input type="text" id="sms_title" name="sms_title" value="{$obj.sms_title}" class="type-text">
+           </li>
+           <li>
+               <label>短信内容</label>
+               <textarea id="sms_content" name="sms_content" cols="100" rows="3">{$obj.sms_content}</textarea>
+           </li>
+		   </div>
+           <div id="ren" style="display:none;">
+           <li>
+               <label>联系人</label>
+               <input type="text" id="contact_title" name="contact_title" value="{$obj.contact_title}" class="type-text">
+           </li>
+           <li>
+               <label>联系人详情</label>
+               <textarea id="contact_content" name="contact_content" cols="100" rows="3">{$obj.contact_content}</textarea>
+           </li>
+		   </div>
+           <div id="url" style="display:none;">
+           <li>
+               <label>网站主页</label>
+               <input type="text" id="web_title" name="web_title" value="{$obj.web_title}" class="type-text">
+           </li>
+           <li>
+               <label>网站详情</label>
+               <textarea id="web_content" name="web_content" cols="100" rows="3">{$obj.web_content}</textarea>
+           </li>
+		   </div>
+           <div id="other" style="display:none;">
+           <li>
+               <label>其他标题</label>
+               <input type="text" id="other_title" name="other_title" value="{$obj.other_title}" class="type-text">
+           </li>
+           <li>
+               <label>其他信息</label>
+               <textarea id="other_content" name="other_content" cols="100" rows="3">{$obj.other_content}</textarea>
+           </li>
+		   </div>
+            <div id="code" style="display:none;">
+           <li>
+               <label>邮政编码</label>
+               <input type="text" id="code_title" name="code_title" value="{$obj.code_title}" class="type-text">
+           </li>
+           <li>
+               <label>编码内容</label>
+               <textarea id="code_content" name="code_content" cols="100" rows="3">{$obj.code_content}</textarea>
+           </li>
+		   </div>
+		   <div id="map_point_box">
+		   <hr>
+		   <li>
+               <label>您的办公地点</label>
+               <input type="text" id="office_location" name="office_location" value="{$obj.office_location}" class="type-text" style="width:500px;">
+			   <input type="button" id="map_point" value="获取地图位置" style="padding:8px;">
+           </li>
+		   <li>
+               <label>X：</label>
+               <input type="text" id="point_x" name="point_x" value="{$obj.point_x}" class="type-text" style="width:500px;"><br>
+			   <label>Y：</label>
+               <input type="text" id="point_y" name="point_y" value="{$obj.point_y}" class="type-text" style="width:500px;">
+           </li>
+		   <li>
+		   	   <label></label>
+			   <div style="width:76%;height:340px;border:1px solid gray;margin-left: 140px;" id="container"></div>
+		   </li>
+		   </div>
+		   <li>
+               <label></label>
+           </li>
+           <li>
+               <label></label>
+               <input type="submit" value="确定并保存" name="save" class="button button-green button-big" />
+               <input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button button-big" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+<script>
+$(function(){
+	$("input[name=lang]").click(function(){
+		if($("#address_title").val()){
+			window.location.href = '__APP__/Admin/<?php echo MODULE_NAME;?>/edit/lang/'+$(this).val()+'/cid/<?php echo $_GET["cid"];?>';
+		}
+	});
+	$("input[name=lang][value=<?php echo empty($obj['lang'])?$_SESSION['lang']:$obj['lang']; ?>]").attr("checked", true);
+	var image = '{$obj.image}';
+	if (image != '') {
+		$('#' + image).find('img').css('border', '2px solid red');
+	}
+	
+	$('.contact_icon li').click(function(){
+		var gid =  $(this).find("a").attr('gid');
+		$(".contact_icon li").removeClass("now");
+		$(this).addClass("now");
+		$("#contactInfo div").hide(0,function(){
+			$("#"+gid).show(0);
+		})
+		if(gid=='address') {
+			$('#map_point_box').show();
+		} else {
+			$('#map_point_box').hide();
+		}
+		$('#image').val($(this).attr('id'));
+		$('#content_type').val($(this).attr('id'));
+	});
+	
+	$('#{$obj.image}').trigger('click');
+
+	$('#map_point').click(function(){
+		window.searchBmap($('#office_location').val());
+	});
+
+	var office_location='{$obj.office_location}';
+	if(office_location) {
+		window.searchBmap(office_location);
+	}
+
+});
+
+function searchBmap(officeLocation) {
+	var map = new BMap.Map("container");
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+	// 创建地址解析器实例
+	var myGeo = new BMap.Geocoder();
+	// 将地址解析结果显示在地图上,并调整地图视野
+	myGeo.getPoint(officeLocation, function(point){
+	  if (point) {
+	    map.centerAndZoom(point, 16);
+	    map.addOverlay(new BMap.Marker(point));
+
+		$('#point_x').val(map.getCenter().lng);
+		$('#point_y').val(map.getCenter().lat);
+	  }
+	}, "");
+}
+</script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>

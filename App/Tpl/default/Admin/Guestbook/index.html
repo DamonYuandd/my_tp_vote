@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>默认数据表格</title>
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/base.css" />
+<link rel="stylesheet" type="text/css" href="__ADMIN__/Public/css/guestbook.css" />
+<script src="__ADMIN__/Public/js/jquery-1.7.1.min.js"></script>
+
+<script>
+function Data(){
+	this._APP_ = "__APP__";
+	this.c_root = "<?php echo $_SESSION['c_root']; ?>";
+	this.get_cid = ""
+	this.rowpage = "<?php echo $rowpage; ?>";
+	this.actionName = "<?php echo $actionName;?>";
+}
+
+$(document).ready(function(){
+
+	$('#select-filter').change(function(){
+		window.location.href = $(this).val();
+	});	
+
+	$('.show_toggle').click(function(){		
+		$this = $(this);
+		var guestbook_content = $this.parent().parent().next();
+
+		if(guestbook_content.is(":hidden")){			
+			$this.text('收起');
+
+			var hidden = $this.next()
+			var guestbook_id = hidden.val();
+
+			if(guestbook_id.length > 0){				
+				$.get("__APP__/Admin/Guestbook/mark_read/id/"+guestbook_id);
+				hidden.val('');
+			} 
+
+			//标记已读
+			var already_read = $this.parent().next();
+			already_read.text('是');
+			guestbook_content.show(300);
+		} else {
+			$this.text('查看');
+			guestbook_content.hide(300);
+		}
+		return false;
+	});
+	
+});
+</script>
+<script src="__ADMIN__/Public/js/index.js"></script>
+
+</head>
+<body>
+<div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])}</div>
+<form action="__APP__/Admin/Guestbook" method="post" id="form_list">
+<input type="hidden" name="cid" value="{.cid}" />
+<table class="grid-function" border="0" cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th width="600">
+<!-- 				<div class="qw-fl grid-add-data">
+					<a href="__APP__/Admin/Guestbook/edit/cid/{.cid}"><input type="button" value="添加招聘" class="button button-red" /></a>
+				</div> -->
+				<div class="qw-fl grid-batch-operate">
+					<a href="#" id="on_delete" title="彻底删除"><img src="__ADMIN__/Public/imgs/delete.png" align="top" /> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+					<?php 
+					function decide_selected($status,$val){
+						if($_GET['status'] === $status && $_GET['val'] === $val ) {
+							echo 'selected';
+						}
+					} ?>
+					过滤：
+				<select id="select-filter">
+					<option value="__APP__/Admin/Guestbook/index/cid/{.cid}" >所有状态</option>
+					<option value="__APP__/Admin/Guestbook/query/status/reply/val/0/cid/{.cid}" <?php echo decide_selected('reply','0');?> >未回复</option>
+					<option value="__APP__/Admin/Guestbook/query/status/reply/val/1/cid/{.cid}" <?php echo decide_selected('reply','1');?> >已回复</option>
+					<option value="__APP__/Admin/Guestbook/query/status/varify/val/0/cid/{.cid}" <?php echo decide_selected('varify','0');?> >未审核</option>
+					<option value="__APP__/Admin/Guestbook/query/status/varify/val/1/cid/{.cid}" <?php echo decide_selected('varify','1');?> >已审核</option>
+				</select>					
+				</div>
+				<div class="qw-fr">
+					
+				</div>
+			</th>
+		</tr>
+	</thead>
+</table>
+<table class="grid-table" border="1" cellpadding="0" cellspacing="0"> 
+	<thead> 
+		<tr >
+			<th width="15"><input type="checkbox" id="chk_all"></th>			
+		    <th style="text-align:center">标题</th>
+		    <th width="50">详细信息</th>
+		    <th width="30" align="center">已读</th>
+		    <th width="30" align="center">审核</th>
+		    <th width="50" align="center">操作</th>
+		</tr> 
+	</thead> 
+	<tbody>
+		<notempty name="dataList">
+			<volist name="dataList" id="vo">
+				<tr> 
+					<td><input type="checkbox" name="ids[]" id="ids{$vo.id}" value="{$i},{$vo.id}"></td>
+				    <td>
+				    	{~getLangTextTitle($vo['lang'])} {$vo.title}
+				    </td>
+				    <td align="center" >
+				    	<a href=""  style="color:red;" class="show_toggle"  >查看</a>
+				    	<input type="hidden" value="{$vo.id}">
+				    </td>
+				    <td align="center">
+				    	<if condition="$vo.read == 0"> 否 <else/> 是 </if>
+				    </td>
+				 
+				    <td align="center">{~getCheckboxState($vo['id'],'is_publish',$vo['is_publish'])}</td>
+				    <td>
+				      <a href="__APP__/Admin/Guestbook/edit/id/{$vo.id}"><img src="__ADMIN__/Public/imgs/edit.png" /></a>&nbsp;&nbsp;
+				   
+				    	<a href="#" onclick="javascript:deleteData('__APP__/Admin/Guestbook/deleteById/id/{$vo.id}');"><img src="__ADMIN__/Public/imgs/cross.png" /></a>
+				    </td>
+				</tr>
+				<tr id="tr_{$vo.id}"  style="display:none;">
+					<td colspan="2">
+						<div class="guest-content">
+							<p><strong>内容：</strong></p>
+							{$vo.content}
+							<div class="guest-date" >发表于: <strong>{$vo.create_time|date="Y-m-d",###} </strong></div>
+						</div>
+						<notempty name="vo['reply']">
+							<div class="guest-reply" >
+								<strong>回复:</strong>
+								{$vo.reply}
+								<div class="guest-date" >回复于:<strong>{$vo.reply_time|date="Y-m-d",###}</strong></div>
+							</div>
+						</notempty>
+					</td>
+					<td colspan="5" valign="top">
+						<ul class="guest-detail guest-detail-item" style="width:220px;margin-left:0px;">
+							<li> 发表人：{$vo.linkman}</li>
+							<li> 性别：{$vo.sex}</li>
+							<li> 公司名称：{$vo.company_name}</li>
+							<li> 联系地址：{$vo.address}</li>
+							<li> 邮政编码：{$vo.code}</li>
+							<li> 电话：{$vo.tel}</li>
+							<li> 传真：{$vo.fax}</li>
+							<li> 手机：{$vo.mobile}</li>
+							<li> 邮箱：{$vo.email}</li>
+						</ul>
+						 
+
+					</td>
+				</tr>
+			</volist>
+		<else/>
+			<tr>
+				<td colspan="10" align="center" style="color:red;">没有找到留言。</td>
+			</tr>
+		</notempty>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="12">
+				<div class="qw-fl">
+					<select name="rowpage" id="rowpage">
+						<option value="10">显示10条</option>
+						<option value="25">显示25条</option>
+						<option value="50">显示50条</option>
+						<option value="99999">显示所有</option>
+					</select>
+				</div>
+				<div class="qw-fr">
+					<div class="grid-pagination">
+					{$pageBar}
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+</form>
+
+</body>
+</html>

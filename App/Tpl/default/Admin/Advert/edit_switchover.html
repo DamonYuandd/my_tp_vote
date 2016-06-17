@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>首页切换图片编辑</title>
+
+<layout name="Inc:edit_page" cache="0" />
+<script src="__PUBLIC__/js/swfobject.js"></script>
+
+</head>
+<body>
+
+<div class="nav-site">{~getNavSite($c_root,$_GET['cid'],$lang)} > 编辑信息</div>
+<form action="__APP__/Admin/Advert/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+   <input type="hidden" name="id" value="{$obj.id}">
+   <input type="hidden" name="my_id" value="{$obj.my_id}">  
+   <input type="hidden" name="one_category_id" value="{.cid}">  
+   <input type="hidden" name="type" value="2"> 
+   <?php if( !isMultilingual($custom) ) { ?>
+	<input type="hidden" name="lang" value="{$obj.lang}">
+	<?php } ?>
+	<?php if( $_GET['lang']=='mobile' ) { ?>
+	<input type="hidden" name="lang" value="{.lang}">
+	<?php } ?>
+   <fieldset>
+       <ul class="align-list">
+       		<?php if( isShowMobile($custom) ) { ?>
+            <li>
+                <label>
+                    选择设备
+                </label><input type="radio" value="<?php echo $custom['def_lang']; ?>" name="mode" checked="checked">&nbsp;电脑版&nbsp;&nbsp;&nbsp; <input type="radio" value="mobile" name="mode">&nbsp;移动版
+            </li>
+            <?php } ?>
+			<?php if( $_GET['lang']!='mobile' ) { ?>
+			<li id="li_lang">
+            {~isLang()}
+			</li>
+			<?php } ?>
+           <li>
+               <label>广告位名称</label>
+               <input type="text" id="title" name="title" value="{$obj.title}" class="type-text">
+           </li>
+           <li>
+               <label>广告图片</label>
+               <?php if( !empty($obj['image']) ) { ?>
+               <span id="span_image">
+			   <img alt="" align="middle" height="80" src="<?php echo $upload_root_path.'images/advert/s_'.$obj['image']; ?>">
+           	   <a href="javascript:void(0)" id="delete_image" style="color:red;text-decoration:underline;">删除封面</a>&nbsp;&nbsp;&nbsp;&nbsp;
+           	   </span>
+           	   <?php } ?>
+			    <input type="file" name="image">
+			    宽：<input name="imgwidth" value="300" style="width:50px;">&nbsp;&nbsp;
+			    高：<input name="imgheight" value="300" style="width:50px;"> <span style="color:#999;">(缩略图显示尺寸)</span>
+           </li>
+           <li>
+               <label>网络图片</label>
+               <input type="text" id="net_image" name="net_image" value="{$obj.net_image}" class="type-text">
+           </li>
+           <li>
+               <label>跳转URL</label>
+               <input type="text" id="url" name="url" value="{$obj.url}" class="type-text">
+           </li>
+           <li>
+               <label>现在发布<a href="#" class="issue" title="在网站前台显示">?</a></label>
+               <input type="checkbox" id="is_publish" name="is_publish" checked="checked" value="1">
+           </li>
+           <li>
+               <label></label>
+               <input type="submit" value="确定并保存" class="button button-green" />
+               <input type="reset" value="重置" class="button button-red" />
+               <input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+</body>
+</html>

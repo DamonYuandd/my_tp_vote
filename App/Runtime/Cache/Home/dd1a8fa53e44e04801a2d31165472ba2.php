@@ -1,0 +1,2 @@
+<?php if (!defined('THINK_PATH')) exit();?><?php if(!empty($obj['image'])): ?><?php if(($_GET['cid'])  !=  "1242"): ?><p><img src="__PUBLIC__/images/news/m_<?php echo ($obj['image']); ?>" width="332" height="440" align="left" style=" margin-right:20px;" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><?php endif; ?><?php endif; ?>
+<?php echo ((htmlspecialchars_decode($obj["content"]))?(htmlspecialchars_decode($obj["content"])):"没有相关信息"); ?>　
