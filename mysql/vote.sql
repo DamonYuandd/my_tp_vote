@@ -30,7 +30,7 @@ CREATE TABLE `y_admin` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `y_admin` (`id`, `is_publish`, `create_time`, `update_time`, `last_login_time`, `login_count`, `username`, `realname`, `password`, `last_login_ip`, `email`, `remark`) VALUES
-(2,	1,	1346841710,	1346841710,	1461810422,	412,	'admin',	'管理员',	'd8fa8c9756c2e8bcb7b704c746ae5f84',	'0.0.0.0',	'',	'备注信息');
+(2,	1,	1346841710,	1346841710,	1466205830,	413,	'admin',	'管理员',	'21232f297a57a5a743894a0e4a801fc3',	'127.0.0.1',	'',	'备注信息');
 
 DROP TABLE IF EXISTS `y_advert`;
 CREATE TABLE `y_advert` (
@@ -104,7 +104,7 @@ INSERT INTO `y_category` (`id`, `pid`, `is_publish`, `is_default`, `is_nav`, `is
 (1512,	1505,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1505',	'蒲记VI',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1513,	1505,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1505',	'蒲记指导店',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1516,	20,	1,	0,	0,	0,	1,	0,	49,	1,	'pc',	'zh-cn',	'12|20',	'港式经典',	'',	'',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
-(36,	12,	1,	0,	1,	0,	0,	1,	14,	1,	'',	'',	'12',	'{\"zh-cn\":{\"title\":\"\\u5173\\u4e8e\\u6211\\u4eec\"}}',	'',	'About',	'About',	'',	'',	'',	'',	'auto',	'',	36,	0),
+(36,	12,	1,	0,	1,	0,	0,	1,	14,	1,	'',	'',	'12',	'{\"zh-cn\":{\"title\":\"\\u6295\\u7968\\u4ecb\\u7ecd\"}}',	'',	'About',	'About',	'',	'',	'',	'',	'auto',	'',	36,	0),
 (34,	30000,	0,	0,	0,	0,	0,	1,	46,	0,	'pc',	'zh-cn',	'12|30',	'邮箱设置',	'',	'Email',	'',	'',	'',	'',	'',	'',	'',	34000,	0),
 (205,	27,	1,	0,	0,	0,	0,	0,	30,	2,	'pc',	'zh-cn',	'12|27',	'人才招聘',	'',	'Job/index',	'',	'',	'',	'',	'',	'list',	'',	205,	0),
 (469,	22,	1,	0,	0,	0,	0,	0,	31,	6,	'pc',	'zh-cn',	'12|22',	'添加网点',	'',	'Market/index',	'',	'',	'',	'',	'',	'list',	'',	469,	1),
@@ -173,7 +173,6 @@ INSERT INTO `y_category` (`id`, `pid`, `is_publish`, `is_default`, `is_nav`, `is
 (1168,	23,	1,	0,	0,	0,	1,	0,	30,	0,	'pc',	'zh-cn',	'12|23',	'首页多图片切换',	'',	'index/adList',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
 (1207,	19,	1,	0,	0,	0,	1,	0,	30,	3,	'mobile',	'zh-cn',	'12|19',	'最新活动',	'',	'',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
 (1169,	24,	1,	0,	0,	0,	1,	0,	30,	0,	'pc',	'zh-cn',	'12|24',	'客服列表',	'',	'Link/info',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
-(1170,	36,	1,	0,	0,	0,	1,	0,	30,	0,	'pc',	'zh-cn',	'12|36',	'关于我们',	'',	'About/indexInfo',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1171,	36,	0,	0,	0,	0,	1,	0,	30,	0,	'pc',	'zh-cn',	'12|36',	'蒲记前景',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1175,	19,	1,	0,	0,	0,	1,	0,	30,	-4,	'pc',	'zh-cn',	'12|19',	'公司动态',	'',	'',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
 (1176,	19,	1,	0,	0,	0,	1,	0,	30,	2,	'pc',	'zh-cn',	'12|19',	'媒体报道',	'',	'News/company',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
@@ -325,7 +324,8 @@ INSERT INTO `y_category` (`id`, `pid`, `is_publish`, `is_default`, `is_nav`, `is
 (1525,	20,	1,	0,	0,	0,	1,	0,	40,	1,	'pc',	'zh-cn',	'12|20',	'中式精选搭配',	'',	'',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
 (1526,	20,	1,	0,	0,	0,	1,	0,	39,	1,	'pc',	'zh-cn',	'12|20',	'中式糖水(冷热)',	'',	'',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
 (1527,	20,	1,	0,	0,	0,	1,	0,	51,	1,	'pc',	'zh-cn',	'12|20',	'蒲记新品',	'',	'',	'',	'',	'',	'',	'',	'list',	'',	0,	0),
-(1528,	36,	1,	0,	0,	0,	1,	0,	31,	1,	'pc',	'zh-cn',	'12|36',	'蒲记发展',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0);
+(1528,	36,	1,	0,	0,	0,	1,	0,	31,	1,	'pc',	'zh-cn',	'12|36',	'投票介绍',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
+(1531,	1530,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1530',	'投票作品',	'',	'',	'',	'',	'__APP__/Admin/Vote/index',	'',	'',	'list',	'',	0,	0);
 
 DROP TABLE IF EXISTS `y_city`;
 CREATE TABLE `y_city` (
@@ -364,6 +364,37 @@ CREATE TABLE `y_group` (
 INSERT INTO `y_group` (`id`, `title`) VALUES
 (1,	'A组(小学1-3年级)'),
 (2,	'B组(小学4-6年级)');
+
+DROP TABLE IF EXISTS `y_news`;
+CREATE TABLE `y_news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) unsigned NOT NULL,
+  `is_publish` int(1) DEFAULT '0',
+  `is_comment` int(1) DEFAULT '0',
+  `is_top` int(1) DEFAULT '0',
+  `is_home` int(1) DEFAULT '0',
+  `click_count` int(11) DEFAULT '1',
+  `ordernum` int(11) DEFAULT '999',
+  `update_time` int(11) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `hardware` varchar(255) NOT NULL DEFAULT 'pc',
+  `lang` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `tag` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `author` varchar(255) DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `summary` varchar(255) DEFAULT NULL,
+  `seo_title` varchar(255) DEFAULT NULL,
+  `seo_keywords` varchar(255) DEFAULT NULL,
+  `seo_description` varchar(255) DEFAULT NULL,
+  `content` text,
+  `my_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `y_news` (`id`, `category_id`, `is_publish`, `is_comment`, `is_top`, `is_home`, `click_count`, `ordernum`, `update_time`, `create_time`, `hardware`, `lang`, `title`, `tag`, `image`, `author`, `source`, `summary`, `seo_title`, `seo_keywords`, `seo_description`, `content`, `my_id`) VALUES
+(1,	1528,	1,	0,	0,	0,	1,	999,	1466206799,	1466206799,	'pc',	'zh-cn',	'投票介绍',	NULL,	NULL,	NULL,	NULL,	'',	'',	'',	'',	'&lt;p&gt;&lt;span style=&quot;color: rgb(0, 130, 0); font-family: 宋体, Verdana, Arial, Helvetica, sans-serif; font-size: 12px;  background-color: rgb(254, 254, 254);&quot;&gt;投票介绍&lt;/span&gt;&lt;/p&gt;',	NULL);
 
 DROP TABLE IF EXISTS `y_system`;
 CREATE TABLE `y_system` (
@@ -421,6 +452,19 @@ INSERT INTO `y_type` (`id`, `title`) VALUES
 (2,	'中国画'),
 (3,	'其他画种');
 
+DROP TABLE IF EXISTS `y_vote`;
+CREATE TABLE `y_vote` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `vid` int(11) NOT NULL COMMENT '投票的id',
+  `phone` varchar(255) NOT NULL COMMENT '手机号码',
+  `ip` varchar(255) NOT NULL COMMENT '客户IP地址防止刷',
+  `addTime` int(11) NOT NULL COMMENT '记录时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `y_vote` (`id`, `vid`, `phone`, `ip`, `addTime`) VALUES
+(1,	3,	'13660236632',	'127.0.0.1',	1466180685);
+
 DROP TABLE IF EXISTS `y_vote_option`;
 CREATE TABLE `y_vote_option` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -452,9 +496,8 @@ CREATE TABLE `y_vote_option` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `y_vote_option` (`id`, `group`, `type`, `title`, `name`, `age`, `city`, `teacher`, `entry_mame`, `guardian`, `relation`, `phone`, `address`, `email`, `author_avatar`, `works_2`, `works_2_w`, `works_2_h`, `works_1`, `works_1_w`, `works_1_h`, `vote_num`, `addTime`, `isFinalist`, `isAwards`) VALUES
-(1,	2,	1,	'作品名称',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13665585523',	'地址',	'8888@qq.com',	'',	'',	'777',	'6666',	'',	'888',	'999',	0,	1466158110,	0,	0),
-(2,	2,	1,	'作品名称r',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13665585523',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	0,	1466158204,	0,	0),
-(3,	2,	1,	'作品名称r',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13660263365',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	0,	1466158540,	0,	0),
-(4,	2,	1,	'作品名称r',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13660263362',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	0,	1466158746,	0,	0);
+(3,	2,	1,	'作品名称r',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13660263365',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	6,	1466158540,	0,	0),
+(4,	2,	1,	'作品名称r',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13660263362',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	4,	1466158746,	0,	0),
+(5,	1,	1,	'作品名称',	'作者名称',	88,	2,	'指导老师',	'单位名称',	'监护人',	'父子',	'13662256652',	'广东',	'88881@qq.com',	'20160617/1466178209.png',	'',	'',	'',	'20160617/1466178230.png',	'888',	'999',	4,	1466178276,	1,	0);
 
--- 2016-06-17 10:22:34
+-- 2016-06-18 00:40:51

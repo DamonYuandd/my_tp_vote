@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="__PUBLIC__/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+<input name="vid" type="hidden" value="{$_GET['id']}" />
+手机号码<input name="phone" type="text" /><br/>
+<input name="codes" type="text" /><img src="{:U('Index/verify')}" id="verifyImg" onclick="javascript:fleshVerify()"/>
+<button id="submit">提交</button>
+
+<script>
+	$(document).ready(function() { 
+		$('#submit').click(function(){
+			var vid = $("input[name=vid]").val();
+			var phone = $("input[name=phone]").val();
+			var codes = $("input[name=codes]").val();
+			
+			$.ajax({
+			    url: "{:U('Vote/voteOption')}",
+			    dataType: "json",
+			    async: false,
+			    data: {
+			    	"vid" : vid,
+			    	"phone":phone,
+			    	"codes":codes
+			    	},
+			    type: "post",
+			   
+			    success: function(req) {
+			    	if(req.status == 0){
+			    		alert(req.info);
+			    		fleshVerify();
+			    		return false;
+			    	}else{
+			    		alert('suess');
+			    		fleshVerify();
+			    		return false;
+			    	}
+			    },
+			    
+			    error: function() {
+			    	fleshVerify();
+			        alert("网络超时，请重试");
+			        return false;
+			    }
+			});
+			
+		});
+	});
+	function fleshVerify(type){ 
+		var timenow = new Date().getTime();
+		if (type){
+			document.getElementById('verifyImg').src= '__APP__/Index/verify/adv/1/'+timenow;
+		}else{
+			document.getElementById('verifyImg').src= '__APP__/Index/verify/'+timenow;
+		}
+	}
+</script>
+</body>
+</html>

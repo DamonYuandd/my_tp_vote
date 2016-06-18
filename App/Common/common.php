@@ -468,3 +468,37 @@ function checkMobile($mobilephone){
 		return false;
 	}
 }
+
+//验证邮件格式
+function checkEmail($email){
+	$pattern = "/^([0-9A-Za-z\\-_\\.]+)@([0-9a-z]+\\.[a-z]{2,3}(\\.[a-z]{2})?)$/i";
+	if ( preg_match( $pattern, $email ) )
+	{
+		 return true;
+	}else{
+		 return false;
+	}
+}
+
+// 定义一个函数getIP()
+function getIP()
+{
+	global $ip;
+
+	if (getenv("HTTP_CLIENT_IP"))
+		$ip = getenv("HTTP_CLIENT_IP");
+	else if(getenv("HTTP_X_FORWARDED_FOR"))
+		$ip = getenv("HTTP_X_FORWARDED_FOR");
+	else if(getenv("REMOTE_ADDR"))
+		$ip = getenv("REMOTE_ADDR");
+	else
+		$ip = "Unknow";
+
+	return $ip;
+}
+
+//输出祖名
+function echoGroup($id,$type= 'group'){
+	$obj = M($type)->where(array('id' => $id))->find();
+	return $obj['title'];
+}

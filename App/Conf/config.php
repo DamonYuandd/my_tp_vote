@@ -35,5 +35,7 @@ return array(
 	//'APP_ROOT_PATH'  => 'J:\wamp\www',
 	/* RBAC */
     'USER_AUTH_KEY'             =>'admin',	// 用户认证SESSION标记
+    'TOTAL_NUM' => '1000',
+	'IP_NUM' => 3
 );
 ?>
