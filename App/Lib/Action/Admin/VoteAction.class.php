@@ -18,12 +18,15 @@ class VoteAction extends AdminAction {
 		/*分页*/
 		$order = 'id desc';
 		import ( "ORG.Util.Page" );
+		
+		//筛选条件
+		
 		$where = '';
 		$count = M('vote_option')->where ( $where )->count ();
 		$page = new Page ( $count, 20 );
-
 		$data = M('vote_option')->where( $where )->order($order)->select();
-
+		
+		
 		$this->assign('pageBar',$page->show());
 		$this->assign('data',$data);
 		$this->display ();
@@ -60,6 +63,24 @@ class VoteAction extends AdminAction {
 	//导出exl
 	public function export(){
 		$this->display();
+	}
+	
+	//更新
+	public function update(){
+		if(empty($_POST['isFinalist'])){
+			$data['isFinalist'] = 0;
+		}else{
+			$data['isFinalist'] = 1;	
+		}
+		
+		if(empty($_POST['isAwards'])){
+			$data['isAwards'] = 0;
+		}else{
+			$data['isAwards'] = 1;
+		}
+		$where = array('id' => $_POST['id']);
+		M('vote_option')->where($where)->save($data);
+		$this->success ( '修改成功！' );
 	}
 	
 }

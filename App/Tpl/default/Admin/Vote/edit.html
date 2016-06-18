@@ -9,12 +9,9 @@
 </head>
 <body>
 <div class="nav-site">{~getNavSite($nav_site,$_GET['cid'])} > 编辑内容</div>
-<form action="__APP__/Admin/News/<?php echo $obj==null?'add':'update'; ?>" method="post" enctype="multipart/form-data" class="form">  
+<form action="__APP__/Admin/Vote/update" method="post" enctype="multipart/form-data" class="form">  
 	<input type="hidden" id="id" name="id" value="{$obj.id}">
-	<input type="hidden" name="category_id" value="{.cid}">
-	<input type="hidden" name="is_publish" value="1">
-	<input type="hidden" name="hardware" value="{$Think.session.hardware}">
-	<input type="hidden" name="lang" value="{.lang}">
+
    <fieldset>
        <ul class="align-list">
        		<li>
@@ -27,7 +24,7 @@
            </li>
            <li>
                <label>作品类型</label>
-               {:echoGroup($obj['group'],'type')}
+               {:echoGroup($obj['type'],'type')}
            </li>
            <li>
                <label>作品名称</label>
@@ -108,8 +105,20 @@
                {$obj.works_2_w} x {$obj.works_2_h}
            </li>
            <li>
+           		<label>投票数</label>
+               {$obj.vote_num} 
+           </li>
+           <li>
+           	    <label>是否参选</label>
+             	<input type="checkbox" name="isFinalist" value="1" <eq name="obj['isFinalist']" value="1"> checked</eq> >
+           </li>
+            <li>
+           	    <label>是否中奖</label>
+             	<input type="checkbox" name="isAwards" value="1" <eq name="obj['isAwards']" value="1"> checked</eq>>
+           </li>
+           <li>
                <label></label>
-               
+               <input type="submit" value="确定"  class="button button-green button-big" />
                <input type="button" value="返回列表" onclick="javascript:history.go(-1);" class="button button-big" />
             </li>
         </ul>

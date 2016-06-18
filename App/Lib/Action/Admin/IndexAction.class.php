@@ -184,10 +184,20 @@ class IndexAction extends AdminAction {
 	
 	//导出excel
 	public function excelPort(){
-		$db = $_GET['db'];
-		$show = $_GET['show'];
-		$listShow = C('SHOW_LIST');
-		// import("ORG.PHPExcel.PHPExcel");
+		if (empty($_GET['do'])){
+			$this->error('错误');
+		}
+		if ($_GET['do'] == 'phone'){
+			$db = M('vote');
+		}else if ($_GET['do'] == 'option'){
+			$db = M('vote_option');
+		}else{
+			$this->error('错误');
+		}
+		
+		
+		$result = $db->select();
+ 
 		import("ORG.Util.PHPExcel");
 		
 		$objPHPExcel = new PHPExcel();
@@ -201,67 +211,73 @@ class IndexAction extends AdminAction {
 		->setKeywords("excel")
 		->setCategory("result file");
 	
-		$db = M($db);
-		if($_GET['db'] == 'Member'){
-			$result = $db->where(array('category_id' => $_GET['cid']))->order('ordernum desc,create_time desc')->select();
-		}else{
-			if ($show && $show != 0){
-				$result = $db->where(array('select_show' => $show))->order('create_time desc')->select();	//查找结果
-			}else{
-				$result = $db->order('create_time desc')->select();	//查找结果
-			}
-		}
-		/* echo $db->getlastsql();
-		 dump($result);
-		 exit;
-		 */
-		foreach($result as $key => $value){
-			$result[$key]['user_info'] = menberInfo($value['user_id']);
-		}
-		/* dump($result);
-		 exit; */
-		if($_GET['db'] == 'Apply'){	//参展申请表
+ 
+		if($_GET['do'] == 'phone'){	//获取投票者手机号码 
 			$objPHPExcel->setActiveSheetIndex(0)
-			//Excel的第A列，uid是你查出数组的键值，下面以此类推
-			->setCellValue('A1', '联系人')
-			->setCellValue('B1', '会员名称')
-			->setCellValue('C1', '公司名称')
-			->setCellValue('D1', '部门/职位')
-			->setCellValue('E1', '联系电话')
-			->setCellValue('F1', '联系传真')
-			->setCellValue('G1', 'E-MAIL')
-			->setCellValue('H1', '公司性质')
-			->setCellValue('I1', '邮政编码')
-			->setCellValue('J1', '公司网址')
-			->setCellValue('K1', '详细地址')
-			->setCellValue('L1', '标准展位')
-			->setCellValue('M1', '光地')
-			->setCellValue('N1', '备注留言')
-			->setCellValue('O1', '申请时间')
-			->setCellValue('P1', '流水号')
-			->setCellValue('Q1', '参展名称')
+			->setCellValue('A1', '联系电话')
+			->setCellValue('B1', '记录时间')
 			;
 			foreach($result as $key => $v){
 				$num=$key+2;
 				$objPHPExcel->setActiveSheetIndex(0)
-				//Excel的第A列，uid是你查出数组的键值，下面以此类推
-				->setCellValue('A'.$num, $v['contact'])
-				->setCellValue('B'.$num, $v['user_info']['username'])
-				->setCellValue('C'.$num, $v['company'])
-				->setCellValue('D'.$num, $v['post'])
-				->setCellValue('E'.$num, $v['tel'])
-				->setCellValue('F'.$num, $v['fax'])
-				->setCellValue('G'.$num, $v['user_info']['email'])
-				->setCellValue('H'.$num, $v['nature'])
-				->setCellValue('I'.$num, $v['code'])
-				->setCellValue('J'.$num, $v['website'])
-				->setCellValue('K'.$num, $v['address'])
-				->setCellValue('L'.$num, $v['standard'])
-				->setCellValue('M'.$num, $v['light'])
-				->setCellValue('N'.$num, $v['remark'])
-				->setCellValue('O'.$num, date("Y-m-d",$v['create_time']))
-				->setCellValue('P'.$num, $v['apply_id'])
-				->setCellValue('Q'.$num, $listShow[$v['select_show']]['name'])
+				->setCellValue('A'.$num, $v['phone'])
+				->setCellValue('B'.$num, date('Y-m-d',$v['addTime']))
+				;
+			}
+		}
+
+		if($_GET['do'] == 'option'){//获取参选作品信息
+			$objPHPExcel->setActiveSheetIndex(0)
+			->setCellValue('A1', '编号')
+			->setCellValue('B1', '组别')
+			->setCellValue('C1', '类型')
+			->setCellValue('D1', '作品名称')
+			->setCellValue('E1', '作者名称')
+			->setCellValue('F1', '作者年龄')
+			->setCellValue('G1', '地区')
+			->setCellValue('H1', '指导老师')
+			->setCellValue('I1', '参赛单位名称')
+			->setCellValue('J1', '作者监护人')
+			->setCellValue('K1', '与作者关系')
+			->setCellValue('L1', '电话')
+			->setCellValue('M1', '地址')
+			->setCellValue('N1', '邮箱')
+			->setCellValue('O1', '作者头像')
+			->setCellValue('P1', '作品1')
+			->setCellValue('Q1', '作品1尺寸')
+			->setCellValue('R1', '作品2')
+			->setCellValue('S1', '作品2尺寸')
+			->setCellValue('T1', '投票数量')
+			->setCellValue('U1', '是否入围')
+			->setCellValue('V1', '是否获奖')
+			->setCellValue('W1', '添加时间')
+			;
+			foreach($result as $key => $v){
+				$num=$key+2;
+				$objPHPExcel->setActiveSheetIndex(0)
+				->setCellValue('A'.$num, $v['id'])
+				->setCellValue('B'.$num, echoGroup($v['group'],'group'))
+				->setCellValue('C'.$num, echoGroup($v['type'],'type'))
+				->setCellValue('D'.$num, $v['title'])
+				->setCellValue('E'.$num, $v['name'])
+				->setCellValue('F'.$num, $v['age'])
+				->setCellValue('G'.$num, echoGroup($v['city'],'city'))
+				->setCellValue('H'.$num, $v['teacher'])
+				->setCellValue('I'.$num, $v['entry_mame'])
+				->setCellValue('J'.$num, $v['guardian'])
+				->setCellValue('K'.$num, $v['relation'])
+				->setCellValue('L'.$num, $v['phone'])
+				->setCellValue('M'.$num, $v['address'])
+				->setCellValue('N'.$num, $v['email'])
+				->setCellValue('O'.$num, $v['author_avatar'])
+				->setCellValue('P'.$num, $v['works_1'])
+				->setCellValue('Q'.$num, $v['works_1_w'].'x'.$v['works_1_h'])
+				->setCellValue('R'.$num, $v['works_2'])
+				->setCellValue('S'.$num, $v['works_2_w'].'x'.$v['works_2_h'])
+				->setCellValue('T'.$num, $v['vote_num'])
+				->setCellValue('U'.$num, $v['isFinalist'])
+				->setCellValue('V'.$num, $v['isAwards'])
+				->setCellValue('W'.$num, date('Y-m-d',$v['addTime']))
 				;
 			}
 		}
@@ -274,7 +290,7 @@ class IndexAction extends AdminAction {
 		$objPHPExcel->getActiveSheet()->setTitle('User');
 		$objPHPExcel->setActiveSheetIndex(0);
 		header('Content-Type: application/vnd.ms-excel');
-		header('Content-Disposition: attachment;filename="'.time().'.xls"');
+		header('Content-Disposition: attachment;filename="'.time().$_GET['do'].'.xls"');
 		header('Cache-Control: max-age=0');
 		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
 		$objWriter->save('php://output');

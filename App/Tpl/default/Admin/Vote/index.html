@@ -32,9 +32,6 @@ function Data(){
 		<tr>
 			<th width="600">
 				
-				<div class="qw-fr">
-					<input name="searchKey" id="searchKey" value="{$searchKey}" onclick="inputText(this,'请输入关键字');" onblur="inputText(this,'请输入关键字');" class="grid-search-input" /> <input type="button" value="搜索" class="button" id="search_button" />
-				</div>
 			</th>
 		</tr>
 	</thead>
@@ -46,11 +43,16 @@ function Data(){
 		<tr>
 			<th width="15"><input type="checkbox" id="chk_all"></th>
 			<th width="40">作品编号</th>
+			<th>组别</th>
+			<th>类型</th>
 		    <th width="40">头像</th>
 		    <th width="80">作者名称</th>
 		    <th>作品名称</th>
 		    <th>作品1</th>
 		    <th>作品2</th>
+		    <th>投票数量</th>
+		    <th>是否参选</th>
+		    <th>是否获奖</th>
 		    <th width="50">操作</th>
 		</tr> 
 	</thead>
@@ -61,6 +63,12 @@ function Data(){
 			<td><input type="checkbox" name="ids[]" id="ids{$vo.id}" value="{$i},{$vo.id}"></td>
 			<td>
 				{$vo.id}
+			</td>
+			<td>
+				 {:echoGroup($vo['group'],'group')}
+			</td>
+			<td>
+				  {:echoGroup($vo['type'],'type')}
 			</td>
 			<td>
 				<a href="__PUBLIC__/Uploads/{$vo.author_avatar}" target="_blank" >
@@ -88,6 +96,23 @@ function Data(){
 				</notempty>
 				 
 			</td>
+			<td>
+				{$vo.vote_num}
+			</td>
+			<td>
+				<eq name="vo['isFinalist']" value="1">
+						<span style="color:red">是</span>
+					<else/>
+						<span style="color:blue">否</span>
+				</eq>
+			</td>
+			<td>
+				<eq name="vo['isAwards']" value="1">
+						<span style="color:red">是</span>
+					<else/>
+						<span style="color:blue">否</span>
+				</eq>
+			</td>
 		    <td>
 		    	<a href="__APP__/Admin/Vote/edit/id/{$vo.id}">
 		    		<img src="__ADMIN__/Public/imgs/edit.png" />
@@ -113,7 +138,7 @@ function Data(){
 					 
 				</div>
 				<div class="qw-fr">
-					<div class="grid-pagination">
+					<div class="grid-pagination" style="margin:0px;">
 					{$pageBar}
 					</div>
 				</div>
