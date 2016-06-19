@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <layout name="Home:Inc:script" cache="0" />
 <layout name="Home:Inc:kefu" cache="0" />
+<style>
+.works_list_box4{
+	display:none;
+}
+</style>
 <div id="header">
 	<layout name="Home:Inc:header" cache="0" />
 <div id="line_center">
@@ -67,7 +72,8 @@
 	              <p>{$vo.title}</p>
 	            </div>
 	          </div>
-	          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+	          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span>
+	          <span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 	          <div class="works_list_box4">
 	            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
 	          </div>
