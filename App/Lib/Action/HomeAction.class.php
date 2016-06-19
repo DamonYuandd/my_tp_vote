@@ -30,11 +30,13 @@ class HomeAction extends CommonAction
 			}		
 		$commomInfo = commonInfo();
 		$commomInfo['qq_nums'] = explode(',',$commomInfo['qq_nums']);
+		
 		$systemDao = M('System');
 		$this->mobile_theme = $commomInfo['mobile_theme'];	//获取手机主题
 		//$this->web_theme = $commomInfo['web_theme']; 	//获取PC主题
 		$this->web_theme = 'Home';
 		$pPart = __ROOT__.'/App/Tpl/default/'.$commomInfo['web_theme'].'/Public';
+		$this->assign('openTime',C('OPEN_TIME'));
 		$this->assign('common',$commomInfo);
 		$this->assign('flow_code',$commonInfo['flow_code']);	//流量统计
 		//$pPart = __ROOT__.'/'.APP_NAME.'/Tpl/default/'.$this->web_theme.'/Public' ;	//前台图片路径	
@@ -47,6 +49,7 @@ class HomeAction extends CommonAction
 		}  else {
 			$this->assignSystem($systemDao);
 		}
+	
 	}
 	
 	//页面跳转

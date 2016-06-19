@@ -8,10 +8,11 @@
 class IndexAction extends HomeAction
 {
 	function _initialize() {
+		
 		parent::_initialize();
 	}
 	public function index() {	
-		
+		 
 		$this->display($this->web_theme.':Index:index');
 	}
 	//验证码生成
@@ -22,7 +23,6 @@ class IndexAction extends HomeAction
 	}
 	
 	public function upload(){
-	
 	
 		if (!empty($_FILES)) {
 			$name=time();

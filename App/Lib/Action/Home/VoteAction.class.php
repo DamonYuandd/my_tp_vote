@@ -149,7 +149,8 @@ class VoteAction extends HomeAction
 		$obj = M('vote_option')->add($data);
 		if($obj){
 			$_SESSION['verify'] = null;
-			$this->ajaxReturn("","上传成功",1);
+			
+			$this->ajaxReturn("",json_encode($obj),1);
 		}else{
 			$this->ajaxReturn("","上传失败",0);
 		}
@@ -256,6 +257,44 @@ class VoteAction extends HomeAction
 		}
 	}
 	
+	//获奖作品
+	public function winner(){
+		$order = 'vote_num desc,id desc';
+		//a组 书法
+		$a1Arr = array('group' => 1,'type' => 1,'isFinalist' => 1,'isAwards' => 1);
+		$a1 = M('vote_option')->where($a1Arr)->order($order)->select();
+		
+		//a组 中国画
+		$a2Arr = array('group' => 1,'type' => 2,'isFinalist' => 1,'isAwards' => 1);
+		$a2 = M('vote_option')->where($a2Arr)->order($order)->select();
+	    
+		
+		//a组 其他
+		$a3Arr = array('group' => 1,'type' => 3,'isFinalist' => 1,'isAwards' => 1);
+		$a3 = M('vote_option')->where($a3Arr)->order($order)->select();
+		
+		
+		//b组 书法
+		$b1Arr = array('group' => 2,'type' => 1,'isFinalist' => 1,'isAwards' => 1);
+		$b1 = M('vote_option')->where($b1Arr)->order($order)->select();
+		
+		//b组 中国画
+		$b2Arr = array('group' => 2,'type' => 2,'isFinalist' => 1,'isAwards' => 1);
+		$b2 = M('vote_option')->where($b2Arr)->order($order)->select();
+		
+		//b组 其他
+		$b3Arr = array('group' => 2,'type' => 3,'isFinalist' => 1,'isAwards' => 1);
+		$b3 = M('vote_option')->where($b3Arr)->order($order)->select();
+		
+		
+		$this->assign('a1',$a1);
+		$this->assign('a2',$a2);
+		$this->assign('a3',$a3);
+		$this->assign('b1',$b1);
+		$this->assign('b2',$b2);
+		$this->assign('b3',$b3);
+		$this->display($this->web_theme.':Vote:winner');
+	}
 
 }
 ?>

@@ -8,7 +8,7 @@ return array(
 	'APP_GROUP_LIST'        => 'Home,Admin',
 	'DEFAULT_ACTION'        => 'index', // 默认操作名称
 	'TMPL_PARSE_STRING'     => array('__ADMIN__'=>__ROOT__.'/'.APP_NAME.'/Tpl/default/Admin',
-									'__HOME__'=>__ROOT__.'/'.APP_NAME.'/Tpl/default/Home/Public',
+									'__HOME__'=>__ROOT__.'/Public/design/',
 								//	'__APP__'=> 'http://'.$_SERVER['HTTP_HOST']
 									),
 
@@ -36,6 +36,7 @@ return array(
 	/* RBAC */
     'USER_AUTH_KEY'             =>'admin',	// 用户认证SESSION标记
     'TOTAL_NUM' => '1000',
-	'IP_NUM' => 3
+	'IP_NUM' => 3,
+	'OPEN_TIME' => '2016-06-19 00:00:00'
 );
 ?>

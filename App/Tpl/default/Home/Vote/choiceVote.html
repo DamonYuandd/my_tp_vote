@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<layout name="Home:Inc:script" cache="0" />
+<layout name="Home:Inc:kefu" cache="0" />
+<div id="header">
+	<layout name="Home:Inc:header" cache="0" />
+<div id="line_center">
+  <div class="nav_first_box">
+   <layout name="Home:Inc:nav" cache="0" />
+  </div>
+  <div class="works_title">
+    <p>请将作品自行装框（裱），作品背面请粘贴系统内生成的“参赛号、参赛者姓名及联系方式”,并于2016年8月19日前寄送至大赛组委会处。（不接受快递到付方式，不寄送原作或作品背面信息不齐全者则视为弃权处理）。 </p>
+    <p>注：作品请勿用玻璃等易碎材质装框（裱），保证作品外框和画心等牢固、结实，以确保在运送、展览过程中完好无损，否则，产生任何破损等问题由作者自负。</p>
+    <p>收件人：陶梦琴   联系电话：86 20-66319617 </p>
+  </div>
+  <div class="works_title_nav">
+		    <script type="text/javascript">
+		             function GoToTab1(oid,a_name){
+						 document.getElementById("div1").style.display="none";
+						 document.getElementById("div2").style.display="none";		
+						 document.getElementById(oid).style.display="block";
+						 
+						 document.getElementById("a1").className="nav_l";
+						 document.getElementById("a2").className="nav_l";
+						 document.getElementById(a_name).className="nav_cur";	 
+					 }
+              </script>
+    <div class="nav_l"><a href="javascript:void(0)" class="nav_l nav_cur" id="a1" onClick="GoToTab1('div1','a1');">A组（小学1-3年级）</a></div>
+    <div class="nav_l"><a href="javascript:void(0)" class="nav_l" id="a2" onClick="GoToTab1('div2','a2');">B组（小学4-6年级）</a></div>
+  </div>
+  <div class="works_list_center">
+	  	<div class="hint" id="box" style="background:url(__HOME__images/tp_bg.png);" style="display:none;">
+	              <div class="hint-in1">
+	                <div class="hint2"></div>
+	                <div class="hint3"></div>
+	              </div>
+	              <div class="hint-in2">
+		                <div class="b3">
+		                 <input name="vid" type="hidden" value="" />
+		                 <input name="phone" type="text" size="20"  onFocus="this.value=''" type="text" style="width:300px; height:43px; border:1px solid #cccccc; padding:0 10px 0 10px; font-size:15px;" value="您的手机号码" />
+		                </div>
+		                <div class="b3">
+		                <span style=" float:left;">
+		                  <input name="codes" type="text" size="20"  onFocus="this.value=''" type="text" style="width:195px; height:43px; border:1px solid #cccccc; padding:0 10px 0 10px; font-size:15px;" value="验证码" />
+		                  </span>
+		                  <span style="float:left">
+		                 	 <img src="{:U('Index/verify')}" id="verifyImg" onclick="javascript:fleshVerify()" width="93" height="43" />
+		                  </span>
+		                 </div>
+	              </div>
+	              <div class="b4" id="submit"><a href="#"><img src="__HOME__images/tjtp.jpg" /></a></div>
+	    </div>
+    <div id="div1" style="display:display;">
+      <div>
+        <div class="works_list_center_title">书法 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="clear:both;"></div>
+        
+        <volist name="a1" id="vo">
+	        <div class="works_list_box">
+	          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+	          <div class="works_list_box2">
+	            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
+	            <div class="works_list_box22">
+	              <p>{$vo.name}  {$vo.age}岁 </p>
+	              <p>{$vo.title}</p>
+	            </div>
+	          </div>
+	          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+	          <div class="works_list_box4">
+	            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+	          </div>
+	        </div>
+        </volist>
+        
+        <div style="clear:both;"></div>
+      </div>
+      <div>
+        <div class="works_list_center_title">中国画&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="clear:both;"></div>
+         <volist name="a2" id="vo">
+	        <div class="works_list_box">
+	          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+	          <div class="works_list_box2">
+	            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
+	            <div class="works_list_box22">
+	              <p>{$vo.name}  {$vo.age}岁 </p>
+	              <p>{$vo.title}</p>
+	            </div>
+	          </div>
+	          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+	          <div class="works_list_box4">
+	            <button class="btn1"  vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+	            
+	          </div>
+	        </div>
+        </volist>
+        <div style="clear:both;"></div>
+      </div>
+      <div>
+        <div class="works_list_center_title">其他画种&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="clear:both;"></div>
+        	<volist name="a3" id="vo">
+		        <div class="works_list_box">
+		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box2">
+		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
+		            <div class="works_list_box22">
+		              <p>{$vo.name}  {$vo.age}岁 </p>
+		              <p>{$vo.title}</p>
+		            </div>
+		          </div>
+		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+		          <div class="works_list_box4">
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		            
+		          </div>
+		        </div>
+	        </volist>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+   <div id="div2" style="display:none;">
+      <div>
+        <div class="works_list_center_title">书法 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="clear:both;"></div>
+        	<volist name="b1" id="vo">
+		        <div class="works_list_box">
+		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box2">
+		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
+		            <div class="works_list_box22">
+		              <p>{$vo.name}  {$vo.age}岁 </p>
+		              <p>{$vo.title}</p>
+		            </div>
+		          </div>
+		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+		          <div class="works_list_box4">
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		          </div>
+		        </div>
+	        </volist>
+        <div style="clear:both;"></div>
+      </div>
+      <div>
+        <div class="works_list_center_title">中国画&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="clear:both;"></div>
+        	<volist name="b2" id="vo">
+		        <div class="works_list_box">
+		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box2">
+		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
+		            <div class="works_list_box22">
+		              <p>{$vo.name}  {$vo.age}岁 </p>
+		              <p>{$vo.title}</p>
+		            </div>
+		          </div>
+		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+		          <div class="works_list_box4">
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		          </div>
+		        </div>
+	        </volist>
+        <div style="clear:both;"></div>
+      </div>
+      <div>
+        <div class="works_list_center_title">其他画种&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div style="clear:both;"></div>
+        	<volist name="b3" id="vo">
+		        <div class="works_list_box">
+		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box2">
+		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
+		            <div class="works_list_box22">
+		              <p>{$vo.name}  {$vo.age}岁 </p>
+		              <p>{$vo.title}</p>
+		            </div>
+		          </div>
+		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
+		          <div class="works_list_box4">
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		          </div>
+		        </div>
+	        </volist>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<layout name="Home:Inc:footer" cache="0" />
+<link rel="stylesheet" type="text/css" href="__HOME__css/alert.css" />
+<script type="text/javascript" src="__HOME__js/jquery-1.7.1.min.js"></script>
+<script>
+	$(document).ready(function() { 
+		$(".btn1").click(function(){
+			var id = $(this).attr('vid');
+			$('input[name=vid]').val(id);
+			$('#box').show(0);
+		});
+		$('.hint3').click(function(){
+			$('#box').hide(0);
+		});
+		$('#submit').click(function(){
+			var vid = $("input[name=vid]").val();
+			var phone = $("input[name=phone]").val();
+			var codes = $("input[name=codes]").val();
+			
+			$.ajax({
+			    url: "{:U('Vote/voteOption')}",
+			    dataType: "json",
+			    async: false,
+			    data: {
+			    	"vid" : vid,
+			    	"phone":phone,
+			    	"codes":codes
+			    	},
+			    type: "post",
+			   
+			    success: function(req) {
+			    	if(req.status == 0){
+			    		alert(req.info);
+			    		fleshVerify();
+			    		return false;
+			    	}else{
+			    		alert('投票成功');
+			    		$('#box').hide(0);
+			    		fleshVerify();
+			    		return false;
+			    	}
+			    },
+			    
+			    error: function() {
+			    	fleshVerify();
+			        alert("网络超时，请重试");
+			        return false;
+			    }
+			});
+			
+		});
+	});
+	function fleshVerify(type){ 
+		var timenow = new Date().getTime();
+		if (type){
+			document.getElementById('verifyImg').src= '__APP__/Index/verify/adv/1/'+timenow;
+		}else{
+			document.getElementById('verifyImg').src= '__APP__/Index/verify/'+timenow;
+		}
+	}
+</script>
+</body>
+</html>

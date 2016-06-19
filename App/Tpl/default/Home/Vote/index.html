@@ -1,159 +1,260 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script src="__PUBLIC__/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-</head>
-<body>
-
-组别:
-<volist name="grouplist" id="vo">
-	<input type="radio" name="group" value="{$vo['id']}" />{$vo['title']}
-</volist>
-
-<br/>
-
-类型:
-<volist name="typelist" id="vo">
-	<input type="radio" name="type" value="{$vo['id']}" />{$vo['title']}
-	
-</volist>
-
-<br/>
-作品名称 <input name="title" type="text" /><br/>
-作者名称 <input name="name" type="text" /><br/>
-作者年龄 <input name="age" type="text" /><br/>
-地区:
-<volist name="citylist" id="vo">
-	<input type="radio" name="city" value="{$vo['id']}" />{$vo['title']}
-</volist>
-<br/>
-指导老师 <input name="teacher" type="text" /><br/>
-参赛单位名称 <input name="entry_mame" type="text" /><br/>
-作者监护人<input name="guardian" type="text" /><br/>
-与作者关系<input name="relation" type="text" /><br/>
-电话<input name="phone" type="text" /><br/>
-地址<input name="address" type="text" /><br/>
-邮箱<input name="email" type="text" /><br/>
-<form action="{:U('Index/upload?position=avatar')}" method="post" enctype="multipart/form-data"  target="upframe" id="form_avatar">
-作者头像<input name="author_avatar" type="file"  onchange="upload('avatar');"/><br/>
-</form>
-
-<form action="{:U('Index/upload?position=work1')}" method="post" enctype="multipart/form-data"  target="upframe" id="form_work1">
-作品1<input name="work_1" type="file" onchange="upload('work1');" /> 
-</form>
-<input type="text" name="works_1_w" /> x <input type="text" name="works_1_h" /> <br/>
-
-<form action="{:U('Index/upload?position=work2')}" method="post" enctype="multipart/form-data"  target="upframe" id="form_work2">
-作品2<input name="work_2" type="file" onchange="upload('work2');" /> 
-</form>
-<input type="text" name="works_2_w" /> x <input type="text" name="works_2_h" /> <br/>
-
-验证码<input name="codes" type="text" />
-	<img src="{:U('Index/verify')}" id="verifyImg" onclick="javascript:fleshVerify()"/>
-<br/>
+<layout name="Home:Inc:script" cache="0" />
+<layout name="Home:Inc:kefu" cache="0" />
+<div id="header">
+  	<layout name="Home:Inc:header" cache="0" />
+<div id="line_center">
+  <div class="nav_first_box">
+   	<layout name="Home:Inc:nav" cache="0" />
+   </div>
+  <div class="exhibitors_center">
+    <table width="100%" border="0">
+      <tr>
+        <td colspan="2"><p align="center" style="font-size:28px; line-height:70px;">请如实填写参赛信息</p></td>
+      </tr>
+      <tr>
+        <td width="16%">* 选择组别：</td>
+        <td width="84%">
+        	<volist name="grouplist" id="vo">
+				<input type="radio" name="group" value="{$vo['id']}"  />&nbsp;{$vo['title']}&nbsp;&nbsp;
+			</volist>
+        </td>
+      </tr>
+      <tr>
+        <td>* 作品类别：</td>
+        <td>
+        	<volist name="typelist" id="vo">
+				<input type="radio" name="type" value="{$vo['id']}" />&nbsp;{$vo['title']}&nbsp;&nbsp;
+			</volist>
+        </td>
+      </tr>
+      <tr>
+        <td>* 作品名称：</td>
+        <td><input type="text"  name="title"  style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 作者姓名：</td>
+        <td><input type="text" name="name" id="textfield" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 作者年龄：</td>
+        <td><input type="text" name="age" id="textfield3" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 所属地区：</td>
+        <td>
+        	<volist name="citylist" id="vo">
+				<input type="radio" name="city" value="{$vo['id']}" />&nbsp;{$vo['title']}&nbsp;&nbsp;
+			</volist>
+        </td>
+      </tr>
+      <tr>
+        <td>* 指导老师：</td>
+        <td><input type="text" name="teacher" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 参赛单位：</td>
+        <td><input type="text"  name="entry_mame" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 作者监护人：</td>
+        <td><input type="text" name="guardian" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 与作者关系：</td>
+        <td><input type="text" name="relation" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 监护人电话：</td>
+        <td><input type="text" name="phone" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 联系地址：</td>
+        <td><input type="text" name="address" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 监护人邮箱：</td>
+        <td><input type="text" name="email" style="width:610px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" /></td>
+      </tr>
+      <tr>
+        <td>* 作者头像：</td>
+        <td><span style="float:left;">
+        	<form action="{:U('Index/upload?position=avatar')}" method="post" enctype="multipart/form-data"  target="upframe" id="form_avatar">
+          		<input type="file"  style="width:300px; height:43px; font-size:15px; margin-top:3px;" name="author_avatar" onchange="upload('avatar');"/>
+           </form>
+          </span> <span style="float:right; font-size:14px; color:#999999;">（ 建议上传50*50像素的头像图片）</span></td>
+      </tr>
+      <tr>
+        <td>* 上传作品一：</td>
+        <td><span style="float:left;">
+         <form action="{:U('Index/upload?position=work1')}" method="post" enctype="multipart/form-data"  target="upframe" id="form_work1">
+          <input type="file"  style="width:300px; height:43px; font-size:15px; margin-top:3px;" onchange="upload('work1');" name="work_1"/>
+         </form> 
+          
+          </span> <span style="float:right; font-size:15px; color:#333;">作品尺寸：
+          <input type="text" name="works_1_w" style="width:100px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" />
+          X
+          <input type="text" name="works_1_h" style="width:100px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" />
+          </span></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;上传作品二：</td>
+        <td><span style="float:left;">
+        	<form action="{:U('Index/upload?position=work2')}" method="post" enctype="multipart/form-data"  target="upframe" id="form_work2">
+          		<input type="file"  style="width:300px; height:43px; font-size:15px; margin-top:3px;" onchange="upload('work2');" name="work_2"/>
+          	</form>
+          </span> <span style="float:right; font-size:15px; color:#333;">作品尺寸：
+          <input type="text" name="works_2_w" style="width:100px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" />
+          X
+          <input type="text" name="works_2_h" style="width:100px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" />
+          </span></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><span style="float:LEFT; font-size:14px; color:#999999;">（ 限上传1-2张 ，作品图片尺寸建议尺寸宽度2000像素以上 , 小于2M , 请务必上传高清作品图）</span></td>
+      </tr>
+      <tr>
+        <td>* 验证码：</td>
+        <td><span style="float:left; font-size:15px; color:#333;">
+          <input  name="codes" type="text"  style="width:100px; height:43px; border:1px solid #cccccc; padding:0 5px 0 5px; font-size:15px;" />
+          </span><span style="float:left; font-size:15px; color:#333; margin-left:20px;"> <img src="{:U('Index/verify')}" id="verifyImg" onclick="javascript:fleshVerify()" width="93" height="43" /> </span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn1" style="float:left; margin-right:30px; margin-left:150px; margin-top:50px;" id="submit"></button>
+          <div class="hint">
+            <div class="hint-in1">
+              <div class="hint2"></div>
+              <div class="hint3"></div>
+            </div>
+            <div class="hint-in2">您已成功提交参赛作品，<br />
+              参赛号码为：<span id="num"></span><br />
+              入选作品信息将于{$openTime|strtotime|date="m月d日",###}公布，<br />
+              请继续关注我们的更新信息，感谢您的支持！ </div>
+            <div class="b2"><a href="{:U('Index/index')}"><img src="__HOME__images/back.jpg" /></a><a href="{:U('Vote/index')}"><img src="__HOME__images/sq.jpg" /></a></div>
+          </div>
+          <div style="margin-top:50px;"><a href="{:U('Index/index')}"><img src="__HOME__images/fh.jpg" /></a></div></td>
+      </tr>
+    </table>
+  </div>
+</div>
 <input id="avatar" type="hidden" />
 <input id="work1" type="hidden" />
 <input id="work2" type="hidden" />
 <iframe id="upframe" name="upframe" style="display:none"></iframe>
-<button id="submit">提交</button>
+<layout name="Home:Inc:footer" cache="0" />
 
-<script>
-	$(document).ready(function() { 
-		$('#submit').click(function(){
-			var group = $("input[name=group]:checked").val();
-			var type = $("input[name=type]:checked").val();
-			var title = $("input[name=title]").val();
-			var name = $("input[name=name]").val();
-			var age = $("input[name=age]").val();
-			var city = $("input[name=city]:checked").val();
-			var teacher = $("input[name=teacher]").val();
-			var entry_mame = $("input[name=entry_mame]").val();
-			var guardian = $("input[name=guardian]").val();
-			var relation = $("input[name=relation]").val();
-			var phone = $("input[name=phone]").val();
-			var address = $("input[name=address]").val();
-			var email = $("input[name=email]").val();
-			var avatar = $("#avatar").val();
-			var work_1 = $("#work1").val();
-			var works_1_w = $("input[name=works_1_w]").val();
-			var works_1_h = $("input[name=works_1_h]").val();
-			var work_2 = $("#work2").val();
-			var works_2_w = $("input[name=works_2_w]").val();
-			var works_2_h = $("input[name=works_2_h]").val();
-			var codes = $("input[name=codes]").val();
-			
-			$.ajax({
-			    url: "{:U('Vote/application')}",
-			    dataType: "json",
-			    async: false,
-			    data: { 
-			    	"group": group,
-			    	"type" : type,
-			    	"title":title,
-			    	"name":name,
-			    	"age":age,
-			    	"city":city,
-			    	"teacher":teacher,
-			    	"entry_mame":entry_mame,
-			    	"guardian":guardian,
-			    	"relation":relation,
-			    	"phone":phone,
-			    	"address":address,
-			    	"email":email,
-			    	"avatar":avatar,
-			    	"work_1":work_1,
-			    	"works_1_w":works_1_w,
-			    	"works_1_h":works_1_h,
-			    	"work_2":work_2,
-			    	"works_2_w":works_2_w,
-			    	"works_2_h":works_2_h,
-			    	"codes":codes
-			    	},
-			    type: "post",
-			   
-			    success: function(req) {
-			    	if(req.status == 0){
-			    		alert(req.info);
-			    		fleshVerify();
-			    		return false;
-			    	}else{
-			    		alert('suess');
-			    		fleshVerify();
-			    		return false;
-			    	}
-			    },
-			    
-			    error: function() {
-			    	fleshVerify();
-			        alert("网络超时，请重试");
-			        return false;
-			    }
-			});
-			
-		});
+<!--弹窗-->
+<link rel="stylesheet" type="text/css" href="__HOME__css/alert.css" />
+<script type="text/javascript" src="__HOME__js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function($){
+	$(".hint3").click(function(event) {
+		$(this).parent().parent().css({"display":"none"});
+		$(".box").css({"display":"none"});
 	});
 	
-	function fleshVerify(type){ 
-		var timenow = new Date().getTime();
-		if (type){
-			document.getElementById('verifyImg').src= '__APP__/Index/verify/adv/1/'+timenow;
-		}else{
-			document.getElementById('verifyImg').src= '__APP__/Index/verify/'+timenow;
-		}
-	}
+	$('#submit').click(function(){
+		var group = $("input[name=group]:checked").val();
+		var type = $("input[name=type]:checked").val();
+		var title = $("input[name=title]").val();
+		var name = $("input[name=name]").val();
+		var age = $("input[name=age]").val();
+		var city = $("input[name=city]:checked").val();
+		var teacher = $("input[name=teacher]").val();
+		var entry_mame = $("input[name=entry_mame]").val();
+		var guardian = $("input[name=guardian]").val();
+		var relation = $("input[name=relation]").val();
+		var phone = $("input[name=phone]").val();
+		var address = $("input[name=address]").val();
+		var email = $("input[name=email]").val();
+		var avatar = $("#avatar").val();
+		var work_1 = $("#work1").val();
+		var works_1_w = $("input[name=works_1_w]").val();
+		var works_1_h = $("input[name=works_1_h]").val();
+		var work_2 = $("#work2").val();
+		var works_2_w = $("input[name=works_2_w]").val();
+		var works_2_h = $("input[name=works_2_h]").val();
+		var codes = $("input[name=codes]").val();
+		
+		$.ajax({
+		    url: "{:U('Vote/application')}",
+		    dataType: "json",
+		    async: false,
+		    data: { 
+		    	"group": group,
+		    	"type" : type,
+		    	"title":title,
+		    	"name":name,
+		    	"age":age,
+		    	"city":city,
+		    	"teacher":teacher,
+		    	"entry_mame":entry_mame,
+		    	"guardian":guardian,
+		    	"relation":relation,
+		    	"phone":phone,
+		    	"address":address,
+		    	"email":email,
+		    	"avatar":avatar,
+		    	"work_1":work_1,
+		    	"works_1_w":works_1_w,
+		    	"works_1_h":works_1_h,
+		    	"work_2":work_2,
+		    	"works_2_w":works_2_w,
+		    	"works_2_h":works_2_h,
+		    	"codes":codes
+		    	},
+		    type: "post",
+		   
+		    success: function(req) {
+		    	if(req.status == 0){
+		    		alert(req.info);
+		    		fleshVerify();
+		    		return false;
+		    	}else{
+		    		//alert('suess');
+		    		$(".hint").css({"display":"block"});
+					$(".box").css({"display":"block"});
+					$('#num').text(req.info);
+		    		fleshVerify();
+		    		return false;
+		    	}
+		    },
+		    
+		    error: function() {
+		    	fleshVerify();
+		        alert("网络超时，请重试");
+		        return false;
+		    }
+		});
+		
+	});
 	
-	function upload(position){
-			$('#form_'+position).submit();
+});
+function fleshVerify(type){ 
+	var timenow = new Date().getTime();
+	if (type){
+		document.getElementById('verifyImg').src= '__APP__/Index/verify/adv/1/'+timenow;
+	}else{
+		document.getElementById('verifyImg').src= '__APP__/Index/verify/'+timenow;
 	}
-	
-	function add(data,position){
-		$('#'+position).val(data);
-		return false;
-	}
-	function error(data){
-		alert(data);
-		return false;
-	}
+}
+
+function upload(position){
+		$('#form_'+position).submit();
+}
+
+function add(data,position){
+	$('#'+position).val(data);
+	return false;
+}
+function error(data){
+	alert(data);
+	return false;
+}
 </script>
+<!--弹窗-->
 </body>
 </html>
