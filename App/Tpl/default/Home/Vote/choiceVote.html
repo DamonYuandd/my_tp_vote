@@ -52,6 +52,19 @@
 	              </div>
 	              <div class="b4" id="submit"><a href="#"><img src="__HOME__images/tjtp.jpg" /></a></div>
 	    </div>
+         <div class="hint" id="vote_suss_box">
+            <div class="hint-in1">
+              <div class="hint2"></div>
+              <div class="hint3"></div>
+            </div>
+            <div class="hint-in2">您已为该作品投票成功！<br />
+              恭喜您将获得第七届艺术广东电子版门票，<br />
+              我们会已短信方式发送给您。<br />
+              获奖作品信息我们将于{$showTime|strtotime|date="m月d日",###}公布，<br />
+              请继续关注我们的更新信息 , 感谢您的支持！<br /></div>
+            <div class="b2"><a href="{:U('Index/index')}"><img src="__HOME__images/back.jpg" /></a><a href="{:U('Vote/index')}"><img src="__HOME__images/sq.jpg" /></a></div>
+          </div>
+        
     <div id="div1" style="display:display;">
       <div>
         <div class="works_list_center_title">书法 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -200,6 +213,7 @@
 		});
 		$('.hint3').click(function(){
 			$('#box').hide(0);
+            $('#vote_suss_box').hide(0);
 		});
 		$('#submit').click(function(){
 			var vid = $("input[name=vid]").val();
@@ -223,8 +237,9 @@
 			    		fleshVerify();
 			    		return false;
 			    	}else{
-			    		alert('投票成功');
+			    		//alert('投票成功');
 			    		$('#box').hide(0);
+                        $('#vote_suss_box').show(0);
 			    		fleshVerify();
 			    		return false;
 			    	}

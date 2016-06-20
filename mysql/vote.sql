@@ -5,14 +5,14 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-DROP TABLE IF EXISTS `y_access`;
-CREATE TABLE `y_access` (
+DROP TABLE IF EXISTS `vote_access`;
+CREATE TABLE `vote_access` (
   `nodes` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-DROP TABLE IF EXISTS `y_admin`;
-CREATE TABLE `y_admin` (
+DROP TABLE IF EXISTS `vote_admin`;
+CREATE TABLE `vote_admin` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `is_publish` int(1) DEFAULT '0',
   `create_time` int(11) unsigned DEFAULT '0',
@@ -29,11 +29,11 @@ CREATE TABLE `y_admin` (
   UNIQUE KEY `username` (`username`) USING BTREE
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_admin` (`id`, `is_publish`, `create_time`, `update_time`, `last_login_time`, `login_count`, `username`, `realname`, `password`, `last_login_ip`, `email`, `remark`) VALUES
+INSERT INTO `vote_admin` (`id`, `is_publish`, `create_time`, `update_time`, `last_login_time`, `login_count`, `username`, `realname`, `password`, `last_login_ip`, `email`, `remark`) VALUES
 (2,	1,	1346841710,	1346841710,	1466310426,	417,	'admin',	'管理员',	'21232f297a57a5a743894a0e4a801fc3',	'127.0.0.1',	'',	'备注信息');
 
-DROP TABLE IF EXISTS `y_advert`;
-CREATE TABLE `y_advert` (
+DROP TABLE IF EXISTS `vote_advert`;
+CREATE TABLE `vote_advert` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) unsigned DEFAULT NULL,
   `is_publish` int(1) DEFAULT '0',
@@ -63,14 +63,14 @@ CREATE TABLE `y_advert` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_advert` (`id`, `category_id`, `is_publish`, `width`, `height`, `ordernum`, `type`, `begin_time`, `end_time`, `update_time`, `create_time`, `hardware`, `lang`, `title`, `flash_img2`, `flash_img1`, `image`, `net_image`, `flash`, `url`, `code`, `target`, `tag`, `content`, `my_id`, `is_top`) VALUES
+INSERT INTO `vote_advert` (`id`, `category_id`, `is_publish`, `width`, `height`, `ordernum`, `type`, `begin_time`, `end_time`, `update_time`, `create_time`, `hardware`, `lang`, `title`, `flash_img2`, `flash_img1`, `image`, `net_image`, `flash`, `url`, `code`, `target`, `tag`, `content`, `my_id`, `is_top`) VALUES
 (1,	1168,	1,	NULL,	NULL,	999,	2,	1378108563,	1378108563,	1378108563,	1378108563,	'pc',	'zh-cn',	'1',	NULL,	NULL,	'522444930cab2.jpg',	'',	NULL,	'',	'',	'_top',	NULL,	'',	0,	0),
 (2,	1168,	1,	NULL,	NULL,	999,	2,	1378108552,	1378108552,	1378108552,	1378108552,	'pc',	'zh-cn',	'2',	NULL,	NULL,	'52244487aff28.jpg',	'',	NULL,	'',	'',	'_top',	NULL,	'',	0,	0),
 (3,	1168,	1,	NULL,	NULL,	999,	2,	1378108543,	1378108543,	1378108543,	1378108543,	'pc',	'zh-cn',	'3',	NULL,	NULL,	'5224447ec7420.jpg',	'',	NULL,	'',	'',	'_top',	NULL,	'',	0,	0),
 (4,	1168,	1,	NULL,	NULL,	999,	2,	1379325161,	1379325161,	1379325161,	1379325161,	'pc',	'zh-cn',	'04',	NULL,	NULL,	'5236d4e8d0d30.jpg',	'',	NULL,	'',	'',	'_top',	NULL,	'',	0,	0);
 
-DROP TABLE IF EXISTS `y_category`;
-CREATE TABLE `y_category` (
+DROP TABLE IF EXISTS `vote_category`;
+CREATE TABLE `vote_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) DEFAULT '0',
   `is_publish` int(1) DEFAULT '1',
@@ -99,7 +99,7 @@ CREATE TABLE `y_category` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_category` (`id`, `pid`, `is_publish`, `is_default`, `is_nav`, `is_comment`, `is_delete`, `is_fixed`, `ordernum`, `list_count`, `hardware`, `lang`, `levels`, `title`, `image`, `alias`, `module`, `color`, `burl`, `furl`, `tag`, `tpl_one`, `description`, `my_id`, `is_mobile`) VALUES
+INSERT INTO `vote_category` (`id`, `pid`, `is_publish`, `is_default`, `is_nav`, `is_comment`, `is_delete`, `is_fixed`, `ordernum`, `list_count`, `hardware`, `lang`, `levels`, `title`, `image`, `alias`, `module`, `color`, `burl`, `furl`, `tag`, `tpl_one`, `description`, `my_id`, `is_mobile`) VALUES
 (1511,	1505,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1505',	'蒲记装修',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1512,	1505,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1505',	'蒲记VI',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1513,	1505,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1505',	'蒲记指导店',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
@@ -326,20 +326,20 @@ INSERT INTO `y_category` (`id`, `pid`, `is_publish`, `is_default`, `is_nav`, `is
 (1528,	36,	1,	0,	0,	0,	1,	0,	31,	1,	'pc',	'zh-cn',	'12|36',	'投票介绍',	'',	'',	'',	'',	'',	'',	'',	'one',	'',	0,	0),
 (1531,	1530,	1,	0,	0,	0,	1,	0,	30,	1,	'pc',	'zh-cn',	'12|1530',	'投票作品',	'',	'',	'',	'',	'__APP__/Admin/Vote/index',	'',	'',	'list',	'',	0,	0);
 
-DROP TABLE IF EXISTS `y_city`;
-CREATE TABLE `y_city` (
+DROP TABLE IF EXISTS `vote_city`;
+CREATE TABLE `vote_city` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_city` (`id`, `title`) VALUES
+INSERT INTO `vote_city` (`id`, `title`) VALUES
 (1,	'广州'),
 (2,	'香港'),
 (3,	'其他');
 
-DROP TABLE IF EXISTS `y_comment`;
-CREATE TABLE `y_comment` (
+DROP TABLE IF EXISTS `vote_comment`;
+CREATE TABLE `vote_comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ref_id` int(11) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
@@ -353,19 +353,19 @@ CREATE TABLE `y_comment` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
-DROP TABLE IF EXISTS `y_group`;
-CREATE TABLE `y_group` (
+DROP TABLE IF EXISTS `vote_group`;
+CREATE TABLE `vote_group` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_group` (`id`, `title`) VALUES
+INSERT INTO `vote_group` (`id`, `title`) VALUES
 (1,	'A组(小学1-3年级)'),
 (2,	'B组(小学4-6年级)');
 
-DROP TABLE IF EXISTS `y_news`;
-CREATE TABLE `y_news` (
+DROP TABLE IF EXISTS `vote_news`;
+CREATE TABLE `vote_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) unsigned NOT NULL,
   `is_publish` int(1) DEFAULT '0',
@@ -392,11 +392,11 @@ CREATE TABLE `y_news` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_news` (`id`, `category_id`, `is_publish`, `is_comment`, `is_top`, `is_home`, `click_count`, `ordernum`, `update_time`, `create_time`, `hardware`, `lang`, `title`, `tag`, `image`, `author`, `source`, `summary`, `seo_title`, `seo_keywords`, `seo_description`, `content`, `my_id`) VALUES
+INSERT INTO `vote_news` (`id`, `category_id`, `is_publish`, `is_comment`, `is_top`, `is_home`, `click_count`, `ordernum`, `update_time`, `create_time`, `hardware`, `lang`, `title`, `tag`, `image`, `author`, `source`, `summary`, `seo_title`, `seo_keywords`, `seo_description`, `content`, `my_id`) VALUES
 (1,	1528,	1,	0,	0,	0,	1,	999,	1466206799,	1466206799,	'pc',	'zh-cn',	'投票介绍',	NULL,	NULL,	NULL,	NULL,	'',	'',	'',	'',	'&lt;p&gt;&lt;span style=&quot;color: rgb(0, 130, 0); font-family: 宋体, Verdana, Arial, Helvetica, sans-serif; font-size: 12px;  background-color: rgb(254, 254, 254);&quot;&gt;投票介绍&lt;/span&gt;&lt;/p&gt;',	NULL);
 
-DROP TABLE IF EXISTS `y_system`;
-CREATE TABLE `y_system` (
+DROP TABLE IF EXISTS `vote_system`;
+CREATE TABLE `vote_system` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `theme` varchar(255) DEFAULT NULL,
   `hardware` varchar(255) NOT NULL DEFAULT 'pc',
@@ -436,23 +436,23 @@ CREATE TABLE `y_system` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_system` (`id`, `theme`, `hardware`, `lang`, `linkman`, `company`, `telephone`, `fax`, `postcode`, `address`, `image`, `app_logo`, `email`, `website`, `domain`, `copyright`, `credible`, `icpnumber`, `seo_title`, `seo_keywords`, `seo_description`, `email_smtp_host`, `email_smtp_port`, `email_username`, `email_password`, `email_subject`, `email_address`, `email_auto`, `is_twoCode`, `my_id`, `sina_wb_url`, `qq_wb_url`, `weibo_type`, `is_share`, `share_plug`, `weibo_plug`) VALUES
+INSERT INTO `vote_system` (`id`, `theme`, `hardware`, `lang`, `linkman`, `company`, `telephone`, `fax`, `postcode`, `address`, `image`, `app_logo`, `email`, `website`, `domain`, `copyright`, `credible`, `icpnumber`, `seo_title`, `seo_keywords`, `seo_description`, `email_smtp_host`, `email_smtp_port`, `email_username`, `email_password`, `email_subject`, `email_address`, `email_auto`, `is_twoCode`, `my_id`, `sina_wb_url`, `qq_wb_url`, `weibo_type`, `is_share`, `share_plug`, `weibo_plug`) VALUES
 (1,	NULL,	'pc',	'zh-cn',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'',	'',	'',	'',	'',	'',	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	1,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL);
 
-DROP TABLE IF EXISTS `y_type`;
-CREATE TABLE `y_type` (
+DROP TABLE IF EXISTS `vote_type`;
+CREATE TABLE `vote_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_type` (`id`, `title`) VALUES
+INSERT INTO `vote_type` (`id`, `title`) VALUES
 (1,	'书法'),
 (2,	'中国画'),
 (3,	'其他画种');
 
-DROP TABLE IF EXISTS `y_vote`;
-CREATE TABLE `y_vote` (
+DROP TABLE IF EXISTS `vote_vote`;
+CREATE TABLE `vote_vote` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vid` int(11) NOT NULL COMMENT '投票的id',
   `phone` varchar(255) NOT NULL COMMENT '手机号码',
@@ -461,13 +461,13 @@ CREATE TABLE `y_vote` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_vote` (`id`, `vid`, `phone`, `ip`, `addTime`) VALUES
+INSERT INTO `vote_vote` (`id`, `vid`, `phone`, `ip`, `addTime`) VALUES
 (1,	3,	'13660236632',	'127.0.0.1',	1466180685),
 (2,	5,	'13660244475',	'127.0.0.1',	1466316867),
 (3,	5,	'13225865547',	'127.0.0.1',	1466317854);
 
-DROP TABLE IF EXISTS `y_vote_option`;
-CREATE TABLE `y_vote_option` (
+DROP TABLE IF EXISTS `vote_vote_option`;
+CREATE TABLE `vote_vote_option` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `group` int(11) NOT NULL COMMENT '选择的组',
   `type` int(11) NOT NULL COMMENT '类型',
@@ -496,7 +496,7 @@ CREATE TABLE `y_vote_option` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `y_vote_option` (`id`, `group`, `type`, `title`, `name`, `age`, `city`, `teacher`, `entry_mame`, `guardian`, `relation`, `phone`, `address`, `email`, `author_avatar`, `works_2`, `works_2_w`, `works_2_h`, `works_1`, `works_1_w`, `works_1_h`, `vote_num`, `addTime`, `isFinalist`, `isAwards`) VALUES
+INSERT INTO `vote_vote_option` (`id`, `group`, `type`, `title`, `name`, `age`, `city`, `teacher`, `entry_mame`, `guardian`, `relation`, `phone`, `address`, `email`, `author_avatar`, `works_2`, `works_2_w`, `works_2_h`, `works_1`, `works_1_w`, `works_1_h`, `vote_num`, `addTime`, `isFinalist`, `isAwards`) VALUES
 (7,	2,	3,	'作品名称2',	'姓名2',	12,	2,	'指导老师',	'参赛单位',	'监护人',	'者关系',	'13660236697',	'地址',	'8999@qq.com',	'20160619/1466312291.jpg',	'20160619/1466312299.jpg',	'855',	'680',	'20160619/1466312296.jpg',	'600',	'770',	0,	1466312379,	1,	0),
 (3,	2,	1,	'作品名称r',	'作者名称',	88,	2,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13660263365',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	6,	1466158540,	1,	0),
 (4,	2,	2,	'作品名称r',	'作者名称',	88,	1,	'指导老师',	'参赛单位名称',	'作者监护人',	'与作者关系',	'13660263362',	'地址',	'8888@qq.com',	'20160617/1466156944.png',	'20160617/1466156956.png',	'777',	'6666',	'20160617/1466156947.png',	'888',	'999',	4,	1466158746,	1,	1),
@@ -505,4 +505,4 @@ INSERT INTO `y_vote_option` (`id`, `group`, `type`, `title`, `name`, `age`, `cit
 (8,	1,	2,	'名称',	'名',	8,	1,	'老师',	'参赛单位',	'护人',	'与作者关系',	'13660254487',	'联系地址',	'77@qq.com',	'20160619/1466312671.jpg',	'',	'',	'',	'20160619/1466312676.jpg',	'888',	'930',	0,	1466312691,	1,	0),
 (9,	2,	3,	'名称',	'名',	8,	1,	'老师',	'参赛单位',	'护人',	'与作者关系',	'13660254484',	'联系地址',	'773@qq.com',	'20160619/1466312671.jpg',	'',	'',	'',	'20160619/1466312676.jpg',	'888',	'930',	0,	1466313050,	1,	0);
 
--- 2016-06-19 06:37:56
+-- 2016-06-20 02:38:10

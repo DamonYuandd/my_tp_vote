@@ -168,7 +168,7 @@ function closeLayout($close) {
 					?>
                 	<li><a href="javascript:void(0)" id="{$vo.alias}" onClick="goToModule(this,'<?php echo $main_url;?>','Index/sidemenu/pid/{$vo.id}/cid/{$vo.first_cid}/lang/{$vo.lang}')">{~getDefNavTitle(json_decode($vo['title'],true),$_SESSION['lang'])}</a></li>
                 </volist>
-                <li><a href="javascript:void(0)" id="System" onClick="goToModule(this,'System/index/cid/base','Index/sidemenu')">系统设置</a></li>
+                <li><a href="javascript:void(0)" id="System" onClick="goToModule(this,'System/index/cid/base','Index/sidemenu')">投票管理</a></li>
                 <li><a href="__APP__" target="_blank" id="Home" style="color:#273E93;font-weight:bold;">网站首页</a></li>
             </ul>
         </div>

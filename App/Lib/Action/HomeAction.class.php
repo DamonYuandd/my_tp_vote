@@ -37,6 +37,7 @@ class HomeAction extends CommonAction
 		$this->web_theme = 'Home';
 		$pPart = __ROOT__.'/App/Tpl/default/'.$commomInfo['web_theme'].'/Public';
 		$this->assign('openTime',C('OPEN_TIME'));
+        $this->assign('showTime',C('SHOW_TIME'));
 		$this->assign('common',$commomInfo);
 		$this->assign('flow_code',$commonInfo['flow_code']);	//流量统计
 		//$pPart = __ROOT__.'/'.APP_NAME.'/Tpl/default/'.$this->web_theme.'/Public' ;	//前台图片路径	

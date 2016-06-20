@@ -18,7 +18,7 @@ return array(
 		'DB_USER'=>'root',
 		'DB_PWD'=>'root',
 		'DB_PORT'=>'3306',
-		'DB_PREFIX'=>'y_',
+		'DB_PREFIX'=>'vote_',
 
 	/* URL设置 */
 	'URL_ROUTER_ON'         => true,
@@ -37,6 +37,7 @@ return array(
     'USER_AUTH_KEY'             =>'admin',	// 用户认证SESSION标记
     'TOTAL_NUM' => '1000',
 	'IP_NUM' => 3,
-	'OPEN_TIME' => '2016-06-19 00:00:00'
+	'OPEN_TIME' => '2016-06-19 00:00:00',
+    'SHOW_TIME' => '2016-06-19 00:00:00'
 );
 ?>
