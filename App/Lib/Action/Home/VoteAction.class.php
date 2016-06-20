@@ -217,6 +217,9 @@ class VoteAction extends HomeAction
 		if($_SESSION['verify'] != md5($data['codes'])) {
 			$this->ajaxReturn("","验证码错误，请注意填写",0);
 		}
+        if(C('CAN_VOTE') == false){
+            $this->ajaxReturn("","已经过了投票期限，请下次再来！！",0);
+        }
 		if(empty($data['vid'])){
 			$this->ajaxReturn("","参数错误",0);
 		}
@@ -296,5 +299,15 @@ class VoteAction extends HomeAction
 		$this->display($this->web_theme.':Vote:winner');
 	}
 
+    //detail 获奖作品
+	public function windetail(){
+		if(empty($_GET['id'])){
+			$this->error('错误');
+		}
+		$obj = M('vote_option')->where(array('id' => $_GET['id']))->find();
+		
+		$this->assign('obj',$obj);
+		$this->display($this->web_theme.':Vote:windetail');
+	}
 }
 ?>

@@ -38,6 +38,7 @@ return array(
     'TOTAL_NUM' => '1000',
 	'IP_NUM' => 3,
 	'OPEN_TIME' => '2016-06-19 00:00:00',
-    'SHOW_TIME' => '2016-06-19 00:00:00'
+    'SHOW_TIME' => '2016-06-19 00:00:00',
+    'CAN_VOTE' => true
 );
 ?>

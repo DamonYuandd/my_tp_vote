@@ -6,7 +6,7 @@
 <layout name="Home:Inc:kefu" cache="0" />
 <style>
 .works_list_box4{
-	display:none;
+	
 }
 </style>
 <div id="header">
@@ -36,27 +36,7 @@
     <div class="nav_l"><a href="javascript:void(0)" class="nav_l" id="a2" onClick="GoToTab1('div2','a2');">B组（小学4-6年级）</a></div>
   </div>
   <div class="works_list_center">
-	  	<div class="hint" id="box" style="background:url(__HOME__images/tp_bg.png);" style="display:none;">
-	              <div class="hint-in1">
-	                <div class="hint2"></div>
-	                <div class="hint3"></div>
-	              </div>
-	              <div class="hint-in2">
-		                <div class="b3">
-		                 <input name="vid" type="hidden" value="" />
-		                 <input name="phone" type="text" size="20"  onFocus="this.value=''" type="text" style="width:300px; height:43px; border:1px solid #cccccc; padding:0 10px 0 10px; font-size:15px;" value="您的手机号码" />
-		                </div>
-		                <div class="b3">
-		                <span style=" float:left;">
-		                  <input name="codes" type="text" size="20"  onFocus="this.value=''" type="text" style="width:195px; height:43px; border:1px solid #cccccc; padding:0 10px 0 10px; font-size:15px;" value="验证码" />
-		                  </span>
-		                  <span style="float:left">
-		                 	 <img src="{:U('Index/verify')}" id="verifyImg" onclick="javascript:fleshVerify()" width="93" height="43" />
-		                  </span>
-		                 </div>
-	              </div>
-	              <div class="b4" id="submit"><a href="#"><img src="__HOME__images/tjtp.jpg" /></a></div>
-	    </div>
+	  
     <div id="div1" style="display:display;">
       <div>
         <div class="works_list_center_title">书法 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
@@ -64,7 +44,7 @@
         
         <volist name="a1" id="vo">
 	        <div class="works_list_box">
-	          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+	          <div class="works_list_box1"><a href="{:U('Vote/windetail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
 	          <div class="works_list_box2">
 	            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
 	            <div class="works_list_box22">
@@ -75,7 +55,7 @@
 	          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span>
 	          <span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 	          <div class="works_list_box4">
-	            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+	            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/over.jpg" /></button>
 	          </div>
 	        </div>
         </volist>
@@ -87,7 +67,7 @@
         <div style="clear:both;"></div>
          <volist name="a2" id="vo">
 	        <div class="works_list_box">
-	          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+	          <div class="works_list_box1"><a href="{:U('Vote/windetail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
 	          <div class="works_list_box2">
 	            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
 	            <div class="works_list_box22">
@@ -97,7 +77,7 @@
 	          </div>
 	          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 	          <div class="works_list_box4">
-	            <button class="btn1"  vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+	            <button class="btn1"  vid="{$vo.id}"><img src="__HOME__images/over.jpg" /></button>
 	            
 	          </div>
 	        </div>
@@ -109,7 +89,7 @@
         <div style="clear:both;"></div>
         	<volist name="a3" id="vo">
 		        <div class="works_list_box">
-		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box1"><a href="{:U('Vote/windetail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
 		          <div class="works_list_box2">
 		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
 		            <div class="works_list_box22">
@@ -119,7 +99,7 @@
 		          </div>
 		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 		          <div class="works_list_box4">
-		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/over.jpg" /></button>
 		            
 		          </div>
 		        </div>
@@ -133,7 +113,7 @@
         <div style="clear:both;"></div>
         	<volist name="b1" id="vo">
 		        <div class="works_list_box">
-		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box1"><a href="{:U('Vote/windetail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
 		          <div class="works_list_box2">
 		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
 		            <div class="works_list_box22">
@@ -143,7 +123,7 @@
 		          </div>
 		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 		          <div class="works_list_box4">
-		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/over.jpg" /></button>
 		          </div>
 		        </div>
 	        </volist>
@@ -154,7 +134,7 @@
         <div style="clear:both;"></div>
         	<volist name="b2" id="vo">
 		        <div class="works_list_box">
-		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box1"><a href="{:U('Vote/windetail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
 		          <div class="works_list_box2">
 		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
 		            <div class="works_list_box22">
@@ -164,7 +144,7 @@
 		          </div>
 		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 		          <div class="works_list_box4">
-		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/over.jpg" /></button>
 		          </div>
 		        </div>
 	        </volist>
@@ -175,7 +155,7 @@
         <div style="clear:both;"></div>
         	<volist name="b3" id="vo">
 		        <div class="works_list_box">
-		          <div class="works_list_box1"><a href="{:U('Vote/detail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
+		          <div class="works_list_box1"><a href="{:U('Vote/windetail',array('id'=>$vo['id']))}"><img src="__PUBLIC__/Uploads/{$vo.works_1}" /></a></div>
 		          <div class="works_list_box2">
 		            <div class="works_list_box21"><img src="__PUBLIC__/Uploads/{$vo.author_avatar}" /></div>
 		            <div class="works_list_box22">
@@ -185,7 +165,7 @@
 		          </div>
 		          <div class="works_list_box3"><span style="float:left;">参赛号{$vo.id}</span><span style="float:right; color:#cd7c90;">已获{$vo.vote_num}票</span></div>
 		          <div class="works_list_box4">
-		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/go.png" /></button>
+		            <button class="btn1" vid="{$vo.id}"><img src="__HOME__images/over.jpg" /></button>
 		          </div>
 		        </div>
 	        </volist>
@@ -197,62 +177,5 @@
 <layout name="Home:Inc:footer" cache="0" />
 <link rel="stylesheet" type="text/css" href="__HOME__css/alert.css" />
 <script type="text/javascript" src="__HOME__js/jquery-1.7.1.min.js"></script>
-<script>
-	$(document).ready(function() { 
-		$(".btn1").click(function(){
-			var id = $(this).attr('vid');
-			$('input[name=vid]').val(id);
-			$('#box').show(0);
-		});
-		$('.hint3').click(function(){
-			$('#box').hide(0);
-		});
-		$('#submit').click(function(){
-			var vid = $("input[name=vid]").val();
-			var phone = $("input[name=phone]").val();
-			var codes = $("input[name=codes]").val();
-			
-			$.ajax({
-			    url: "{:U('Vote/voteOption')}",
-			    dataType: "json",
-			    async: false,
-			    data: {
-			    	"vid" : vid,
-			    	"phone":phone,
-			    	"codes":codes
-			    	},
-			    type: "post",
-			   
-			    success: function(req) {
-			    	if(req.status == 0){
-			    		alert(req.info);
-			    		fleshVerify();
-			    		return false;
-			    	}else{
-			    		alert('投票成功');
-			    		$('#box').hide(0);
-			    		fleshVerify();
-			    		return false;
-			    	}
-			    },
-			    
-			    error: function() {
-			    	fleshVerify();
-			        alert("网络超时，请重试");
-			        return false;
-			    }
-			});
-			
-		});
-	});
-	function fleshVerify(type){ 
-		var timenow = new Date().getTime();
-		if (type){
-			document.getElementById('verifyImg').src= '__APP__/Index/verify/adv/1/'+timenow;
-		}else{
-			document.getElementById('verifyImg').src= '__APP__/Index/verify/'+timenow;
-		}
-	}
-</script>
 </body>
 </html>
